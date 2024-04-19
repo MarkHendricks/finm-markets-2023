@@ -16,7 +16,7 @@ beautifulsoup4==4.12.3
 black==24.3.0
 colorama
 doit==0.36.0
-ipython==8.22.2
+ipython
 holidays
 jupyter==1.0.0
 jupyter-book==1.0.0
@@ -51,3 +51,4 @@ wrds==3.2.0
 xbbg==0.7.7
 xlrd==2.0.1
 zstandard==0.22.0
+jupyter_contrib_nbextensions

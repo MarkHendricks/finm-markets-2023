@@ -165,11 +165,8 @@ cython_debug/
 
 # dev folder for working out ideas
 dev/
-.doit.db.bak
 
-.doit.db.dat
-
-.doit.db.dir
+.doit.*
 
 output/
 
