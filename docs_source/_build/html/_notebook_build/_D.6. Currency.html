@@ -1,0 +1,1224 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>D.6. Currency &#8212; FINM Markets</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_notebook_build/_D.6. Currency';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="D.4. Commodity Futures" href="_D.4.%20Commodity%20Futures.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="FINM Markets - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="FINM Markets - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    My Blank Project
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="_D.0.%20Introduction.html">D.0. Introduction</a></li>
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../myst_markdown_demos.html">MyST Markdown Demos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="_D.1.%20Treasury%20Debt.html">D.1. Treasury Debt</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="_D.1.X.%20Debt%20Markets.html">D.1.X Debt Markets</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_D.2.%20Money%20Markets.html">D.2. Money Markets</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_D.3.%20Inflation.html">D.3. Inflation</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_D.4.%20Commodity%20Futures.html">D.4. Commodity Futures</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D.6. Currency</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarkHendricks/finm-markets-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarkHendricks/finm-markets-2023/issues/new?title=Issue%20on%20page%20%2F_notebook_build/_D.6. Currency.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_notebook_build/_D.6. Currency.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>D.6. Currency</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">D.6. Currency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markets-foundations">Markets Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uchicago-financial-mathematics">UChicago Financial Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2023">September 2023</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#currency">Currency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notable-features">Notable Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-free-rates">Risk-free rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-rates">Exchange rates</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#returns">Returns</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-components-to-returns">Two components to returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-statistics-on-returns">Extra Statistics on Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposing-the-returns">Decomposing the Returns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithms">Logarithms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excess-returns">Excess returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-spreads">Two spreads</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-consideration">Data Consideration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptocurrency">Cryptocurrency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crypto-data">Crypto Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economics-of-crytpo">Economics of Crytpo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockchain">Blockchain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-blockchain">Explore the blockchain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptographic-security">Cryptographic security</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="d-6-currency">
+<h1>D.6. Currency<a class="headerlink" href="#d-6-currency" title="Link to this heading">#</a></h1>
+<section id="markets-foundations">
+<h2>Markets Foundations<a class="headerlink" href="#markets-foundations" title="Link to this heading">#</a></h2>
+<section id="uchicago-financial-mathematics">
+<h3>UChicago Financial Mathematics<a class="headerlink" href="#uchicago-financial-mathematics" title="Link to this heading">#</a></h3>
+<section id="september-2023">
+<h4>September 2023<a class="headerlink" href="#september-2023" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Mark Hendricks</p></li>
+<li><p><a class="reference external" href="mailto:hendricks&#37;&#52;&#48;uchicago&#46;edu">hendricks<span>&#64;</span>uchicago<span>&#46;</span>edu</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;../cmds&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">treasury_cmds</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="c1">#from portfolio import *</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\frn}{*}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\RF}{R^{f,\$}}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\RFa}{R^{f,\frn}}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\rflog}{\texttt{r}^{f,\$}}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\rfalog}{\texttt{r}^{f,\frn}}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\Fcrncy}{F^{\$}}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\fcrncylog}{\texttt{f}^{\$}}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\FX}{S}\]</div>
+<div class="math notranslate nohighlight">
+\[\newcommand{\fxlog}{\texttt{s}}\]</div>
+</section>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="currency">
+<h1>Currency<a class="headerlink" href="#currency" title="Link to this heading">#</a></h1>
+<p>Currency is traded on the <strong>spot</strong> market at the <strong>exchange rate</strong>.</p>
+<section id="derivatives">
+<h2>Derivatives<a class="headerlink" href="#derivatives" title="Link to this heading">#</a></h2>
+<p>Currency derivatives include, (in descending order of size/importance)</p>
+<ul class="simple">
+<li><p>forwards</p></li>
+<li><p>swaps</p></li>
+<li><p>futures</p></li>
+<li><p>options</p></li>
+</ul>
+<p>A few notes on the sizes here…</p>
+<ul class="simple">
+<li><p>Forward currency market is larger than interest-rate forwards!</p></li>
+<li><p>Swaps market for currency is about 10% the size of interest-rate swaps.</p></li>
+<li><p>Currency options are relatively small, yet still about 1/3 the size of equity options!</p></li>
+</ul>
+<section id="notable-features">
+<h3>Notable Features<a class="headerlink" href="#notable-features" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>FX markets are smaller than rates markets, but still huge.</p></li>
+<li><p>FX trades mostly in spot, forwards, and swaps</p></li>
+<li><p>Relatively small amount in options or futures</p></li>
+</ul>
+</section>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<p>OTC Derivatives Size</p>
+<p><a class="reference external" href="https://stats.bis.org/statx/srs/table/d5.1">https://stats.bis.org/statx/srs/table/d5.1</a></p>
+<p>Futures Markets Size</p>
+<p><a class="reference external" href="https://stats.bis.org/statx/srs/table/d1">https://stats.bis.org/statx/srs/table/d1</a></p>
+<p>Trading Turnover</p>
+<p><a class="reference external" href="https://stats.bis.org/statx/srs/table/d11.1">https://stats.bis.org/statx/srs/table/d11.1</a></p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data">
+<h1>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">fx_carry_data.xlsx</span></code>.</p>
+<section id="risk-free-rates">
+<h2>Risk-free rates<a class="headerlink" href="#risk-free-rates" title="Link to this heading">#</a></h2>
+<p>It reports the risk-free rates for various currencies.</p>
+<ul class="simple">
+<li><p>Uses LIBOR, which is being phased out, but is still in-use and easy to get the data from the Fed site, <strong>FRED</strong>.</p></li>
+</ul>
+<p>Timing of the risk-free rate</p>
+<ul class="simple">
+<li><p>The data is defined such that the March value of the risk-free rate corresponds to the rate beginning in March and ending in April.</p></li>
+<li><p>In terms of the class notation, <span class="math notranslate nohighlight">\(r^{f,i}_{t,t+1}\)</span> is reported at time <span class="math notranslate nohighlight">\(t\)</span>. (It is risk-free, so it is a rate from <span class="math notranslate nohighlight">\(t\)</span> to <span class="math notranslate nohighlight">\(t+1\)</span> but it is know at <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+</ul>
+</section>
+<section id="exchange-rates">
+<h2>Exchange rates<a class="headerlink" href="#exchange-rates" title="Link to this heading">#</a></h2>
+<p>Spot exchange rates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DATAPATH_FX</span> <span class="o">=</span> <span class="s1">&#39;../data/fx_carry_data.xlsx&#39;</span>
+<span class="n">SHEET</span> <span class="o">=</span> <span class="s1">&#39;fx rates&#39;</span>
+
+<span class="n">fx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">DATAPATH_FX</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="n">SHEET</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;DATE&#39;</span><span class="p">)</span>
+<span class="n">fx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Exchange Rates&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;USD per foreign&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5aa1578871adf8ccbf2f9c3e1f368394b69139b0be354620585049d28188feb3.png" src="../_images/5aa1578871adf8ccbf2f9c3e1f368394b69139b0be354620585049d28188feb3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">fx</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlation: FX rate (month-over-month differences)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c7becf61234ade5bf6ff194c5debff958da8585ee73393a0515a5f8b695bf9ac.png" src="../_images/c7becf61234ade5bf6ff194c5debff958da8585ee73393a0515a5f8b695bf9ac.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SHEET</span> <span class="o">=</span> <span class="s1">&#39;risk-free rates&#39;</span>
+
+<span class="n">rfraw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">DATAPATH_FX</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="n">SHEET</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;DATE&#39;</span><span class="p">)</span>
+<span class="n">rfraw</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span><span class="o">.</span><span class="n">removesuffix</span><span class="p">(</span><span class="s1">&#39;1M&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">rfraw</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="p">(</span><span class="n">rfraw</span> <span class="o">*</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Risk-free rate&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/eeb3f0c4592f37e9f3a67da841be6581f5484a732bea03c83c6b55481176c149.png" src="../_images/eeb3f0c4592f37e9f3a67da841be6581f5484a732bea03c83c6b55481176c149.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">rfraw</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlation: Interest rate (month-over-month differences)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1f9c573ec74f339d8c567d1e011cdfdf4f3a81e086250018c3e5d6c22fc3ac85.png" src="../_images/1f9c573ec74f339d8c567d1e011cdfdf4f3a81e086250018c3e5d6c22fc3ac85.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="returns">
+<h1>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h1>
+<section id="notation">
+<h2>Notation<a class="headerlink" href="#notation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(S_t\)</span> denotes the foreign exchange rate, expressed as USD per foreign currency</p></li>
+<li><p><span class="math notranslate nohighlight">\(\RF_{t,t+1}\)</span> denotes the risk-free factor on US dollars (USD).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\RFa_{t,t+1}\)</span> denotes the risk-free factor on a particular foreign currency.</p></li>
+</ul>
+</section>
+<section id="two-components-to-returns">
+<h2>Two components to returns<a class="headerlink" href="#two-components-to-returns" title="Link to this heading">#</a></h2>
+<p>Misconception that the return on currency is the percentage change in the exchange rate:
+$<span class="math notranslate nohighlight">\(\frac{S_{t+1}}{S_t}\)</span>$</p>
+<p>The price of the currency is <span class="math notranslate nohighlight">\(S_t\)</span> dollars.</p>
+<ul class="simple">
+<li><p>In terms of USD, the payoff at time t + 1 of the Euro riskless asset is
+$<span class="math notranslate nohighlight">\(\RFa_{t,t+1} S_{t+1}\)</span>$</p></li>
+</ul>
+<p>That is,</p>
+<ul class="simple">
+<li><p>we capitalize any FX gains,</p></li>
+<li><p>but we also earn the riskless return accumulated by the foreign currency.</p></li>
+</ul>
+<p>Thus, the USD return on holding Euros is given by,
+$<span class="math notranslate nohighlight">\(\RFa_{t,t+1}\frac{ S_{t+1}}{S_t}\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USDRF</span> <span class="o">=</span> <span class="s1">&#39;USD&#39;</span>
+
+<span class="n">rfusd</span> <span class="o">=</span> <span class="n">rfraw</span><span class="p">[[</span><span class="n">USDRF</span><span class="p">]]</span>
+<span class="n">rf</span> <span class="o">=</span> <span class="n">rfraw</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">USDRF</span><span class="p">])</span>
+
+<span class="n">fxgrowth</span> <span class="o">=</span> <span class="p">(</span><span class="n">fx</span> <span class="o">/</span> <span class="n">fx</span><span class="o">.</span><span class="n">shift</span><span class="p">())</span>
+<span class="n">rets</span> <span class="o">=</span> <span class="n">fxgrowth</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">rf</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">rx</span> <span class="o">=</span> <span class="n">rets</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">rfusd</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rets</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2018-04-01&#39;</span><span class="p">:,:]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>USUK    0.000004
+USEU   -0.001756
+USSZ    0.000420
+USJP   -0.001623
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">rets</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">rfusd</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Cumulative Returns of FX&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;cumulative return&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6b81faa355f588cddd5ed97833afa976823613ad0c6f5f0b2965c7cc4020a432.png" src="../_images/6b81faa355f588cddd5ed97833afa976823613ad0c6f5f0b2965c7cc4020a432.png" />
+</div>
+</div>
+</section>
+<section id="extra-statistics-on-returns">
+<h2>Extra Statistics on Returns<a class="headerlink" href="#extra-statistics-on-returns" title="Link to this heading">#</a></h2>
+<p>Main takeaway:</p>
+<ul class="simple">
+<li><p>small mean return–only exciting if you use leverage</p></li>
+<li><p>substantial volatility</p></li>
+<li><p>large drawdowns (tail-events)</p></li>
+</ul>
+</section>
+<section id="decomposing-the-returns">
+<h2>Decomposing the Returns<a class="headerlink" href="#decomposing-the-returns" title="Link to this heading">#</a></h2>
+<p>Using logs, we can split out the two components of excess log returns</p>
+<section id="logarithms">
+<h3>Logarithms<a class="headerlink" href="#logarithms" title="Link to this heading">#</a></h3>
+<p>The data is mostly analyzed in logs, as this simplifies equations later.</p>
+<ul class="simple">
+<li><p>For monthly rates, logs vs levels won’t make a big difference.</p></li>
+</ul>
+</section>
+<section id="excess-returns">
+<h3>Excess returns<a class="headerlink" href="#excess-returns" title="Link to this heading">#</a></h3>
+<p>The (USD) return in excess of the (USD) risk-free rate is then</p>
+<div class="math notranslate nohighlight">
+\[\tilde{r}^i_{t+1} \equiv \fxlog^i_{t+1} - \fxlog^i_t + r^{f,i}_{t,t+1} - r^{f,\$}_{t,t+1}\]</div>
+</section>
+<section id="two-spreads">
+<h3>Two spreads<a class="headerlink" href="#two-spreads" title="Link to this heading">#</a></h3>
+<p>For convenience, rewrite this as</p>
+<div class="math notranslate nohighlight">
+\[\tilde{r}^i_{t+1} \equiv \left(\fxlog^i_{t+1} - \fxlog^i_t\right) + (\rfalog_{t,t+1} - \rflog_{t,t+1})\]</div>
+<section id="data-consideration">
+<h4>Data Consideration<a class="headerlink" href="#data-consideration" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Build the spread in risk-free rates:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\rflog_{t,t+1} - \rfalog_{t,t+1}$$.\\* Lag this variable, so that the March-to-April value is stamped as April.\\2. Build the FX growth rates: \\$$ \fxlog^i_{t+1} - \fxlog^i_t\end{aligned}\end{align} \]</div>
+<ul class="simple">
+<li><p>These are already stamped as April for the March-to-April FX growth.</p></li>
+</ul>
+<p>Then the excess log return is simply the difference of the two objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logFX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">fx</span><span class="p">)</span>
+<span class="n">logRFraw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">rfraw</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">logRFusd</span> <span class="o">=</span> <span class="n">logRFraw</span><span class="p">[[</span><span class="n">USDRF</span><span class="p">]]</span>
+<span class="n">logRF</span> <span class="o">=</span> <span class="n">logRFraw</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">USDRF</span><span class="p">])</span>
+
+<span class="n">logRFspread</span> <span class="o">=</span> <span class="o">-</span><span class="n">logRF</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">logRFusd</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">logRFspread</span> <span class="o">=</span> <span class="n">logRFspread</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">logFXgrowth</span> <span class="o">=</span> <span class="n">logFX</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">logRX</span> <span class="o">=</span> <span class="n">logFXgrowth</span> <span class="o">-</span> <span class="n">logRFspread</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">logFXgrowth</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Log FX Growth&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6cdde84fd2d73a8366c5fcf415c6a83d7f9c25a96a22aa2ada893e4a049c2b30.png" src="../_images/6cdde84fd2d73a8366c5fcf415c6a83d7f9c25a96a22aa2ada893e4a049c2b30.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">-</span><span class="n">logRFspread</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Log Interest Rate Spread (Other-USD)&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/fab908c95075c02a2ce847e02d62bd7ccd9efbe7229b8596431a58887ee879ae.png" src="../_images/fab908c95075c02a2ce847e02d62bd7ccd9efbe7229b8596431a58887ee879ae.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rx_components</span> <span class="o">=</span> <span class="n">logFXgrowth</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">rx_components</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;FX effect&#39;</span><span class="p">]</span>
+<span class="n">rx_components</span><span class="p">[</span><span class="s1">&#39;RF effect&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">logRFspread</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="n">rx_components</span><span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rx_components</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rx_components</span> <span class="o">*=</span> <span class="mi">12</span>
+<span class="n">rx_components</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:.2%}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_06d0c">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_06d0c_level0_col0" class="col_heading level0 col0" >FX effect</th>
+      <th id="T_06d0c_level0_col1" class="col_heading level0 col1" >RF effect</th>
+      <th id="T_06d0c_level0_col2" class="col_heading level0 col2" >Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_06d0c_level0_row0" class="row_heading level0 row0" >USUK</th>
+      <td id="T_06d0c_row0_col0" class="data row0 col0" >-0.81%</td>
+      <td id="T_06d0c_row0_col1" class="data row0 col1" >0.46%</td>
+      <td id="T_06d0c_row0_col2" class="data row0 col2" >-0.35%</td>
+    </tr>
+    <tr>
+      <th id="T_06d0c_level0_row1" class="row_heading level0 row1" >USEU</th>
+      <td id="T_06d0c_row1_col0" class="data row1 col0" >0.07%</td>
+      <td id="T_06d0c_row1_col1" class="data row1 col1" >-0.50%</td>
+      <td id="T_06d0c_row1_col2" class="data row1 col2" >-0.44%</td>
+    </tr>
+    <tr>
+      <th id="T_06d0c_level0_row2" class="row_heading level0 row2" >USSZ</th>
+      <td id="T_06d0c_row2_col0" class="data row2 col0" >1.91%</td>
+      <td id="T_06d0c_row2_col1" class="data row2 col1" >-1.48%</td>
+      <td id="T_06d0c_row2_col2" class="data row2 col2" >0.43%</td>
+    </tr>
+    <tr>
+      <th id="T_06d0c_level0_row3" class="row_heading level0 row3" >USJP</th>
+      <td id="T_06d0c_row3_col0" class="data row3 col0" >0.08%</td>
+      <td id="T_06d0c_row3_col1" class="data row3 col1" >-1.82%</td>
+      <td id="T_06d0c_row3_col2" class="data row3 col2" >-1.74%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="cryptocurrency">
+<h1>Cryptocurrency<a class="headerlink" href="#cryptocurrency" title="Link to this heading">#</a></h1>
+<section id="crypto-data">
+<h2>Crypto Data<a class="headerlink" href="#crypto-data" title="Link to this heading">#</a></h2>
+<p>For a more thorough description of Crypto, see the references below.</p>
+<p>Here, we simply look at the data of the 4 largest cryptocurrencies.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LOADFILE</span> <span class="o">=</span> <span class="s1">&#39;../data/fx_data.xlsx&#39;</span>
+<span class="n">crypto</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">LOADFILE</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;crypto&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;DATE&#39;</span><span class="p">)</span>
+<span class="n">crypto</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BTC</th>
+      <th>ETH</th>
+      <th>LTC</th>
+      <th>BCH</th>
+    </tr>
+    <tr>
+      <th>DATE</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-12-20</th>
+      <td>16496.89</td>
+      <td>802.86</td>
+      <td>305.59</td>
+      <td>3746.84</td>
+    </tr>
+    <tr>
+      <th>2017-12-21</th>
+      <td>15758.80</td>
+      <td>796.98</td>
+      <td>311.00</td>
+      <td>3162.53</td>
+    </tr>
+    <tr>
+      <th>2017-12-22</th>
+      <td>14210.57</td>
+      <td>682.11</td>
+      <td>267.79</td>
+      <td>2719.99</td>
+    </tr>
+    <tr>
+      <th>2017-12-26</th>
+      <td>15790.88</td>
+      <td>755.07</td>
+      <td>280.14</td>
+      <td>2928.04</td>
+    </tr>
+    <tr>
+      <th>2017-12-27</th>
+      <td>15367.08</td>
+      <td>739.99</td>
+      <td>264.40</td>
+      <td>2719.69</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2023-06-26</th>
+      <td>30279.98</td>
+      <td>1858.93</td>
+      <td>87.11</td>
+      <td>223.51</td>
+    </tr>
+    <tr>
+      <th>2023-06-27</th>
+      <td>30702.10</td>
+      <td>1889.65</td>
+      <td>88.00</td>
+      <td>229.31</td>
+    </tr>
+    <tr>
+      <th>2023-06-28</th>
+      <td>30102.60</td>
+      <td>1829.17</td>
+      <td>83.00</td>
+      <td>225.25</td>
+    </tr>
+    <tr>
+      <th>2023-06-29</th>
+      <td>30441.40</td>
+      <td>1851.72</td>
+      <td>84.75</td>
+      <td>252.72</td>
+    </tr>
+    <tr>
+      <th>2023-06-30</th>
+      <td>30475.82</td>
+      <td>1935.13</td>
+      <td>108.94</td>
+      <td>305.46</td>
+    </tr>
+  </tbody>
+</table>
+<p>1375 rows × 4 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">currency</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">fx</span><span class="p">,</span><span class="n">crypto</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">currency</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">last</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlation of DIFFERENCES of crytpocurrency to other exchange rates&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/zx/3v_qt0957xzg3nqtnkv007d00000gn/T/ipykernel_9863/2676918284.py:3: FutureWarning: &#39;M&#39; is deprecated and will be removed in a future version, please use &#39;ME&#39; instead.
+  sns.heatmap(currency.resample(&#39;M&#39;).last().pct_change().corr(),annot=True);
+/var/folders/zx/3v_qt0957xzg3nqtnkv007d00000gn/T/ipykernel_9863/2676918284.py:3: FutureWarning: The default fill_method=&#39;pad&#39; in DataFrame.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify &#39;fill_method=None&#39; to not fill NA values.
+  sns.heatmap(currency.resample(&#39;M&#39;).last().pct_change().corr(),annot=True);
+</pre></div>
+</div>
+<img alt="../_images/8940d479b6f49eda0ae66d241b61d8142d9368e9dd50c026d037dbcfaf815e56.png" src="../_images/8940d479b6f49eda0ae66d241b61d8142d9368e9dd50c026d037dbcfaf815e56.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+    <span class="n">crypto</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="n">col</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/967c983e57d5e8ee6d303d72816e41fb81a7023187b05c4e328bdcf019b13113.png" src="../_images/967c983e57d5e8ee6d303d72816e41fb81a7023187b05c4e328bdcf019b13113.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ea9761a070ee6706c9e58f008b517a2dcd33deee86f35225709f6972aa82fd6d.png" src="../_images/ea9761a070ee6706c9e58f008b517a2dcd33deee86f35225709f6972aa82fd6d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ANNUALIZE</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">252</span><span class="p">)</span>
+<span class="p">(</span><span class="n">currency</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">*</span><span class="n">ANNUALIZE</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Volatility of Exchange Rate Changes&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/zx/3v_qt0957xzg3nqtnkv007d00000gn/T/ipykernel_9863/94748999.py:2: FutureWarning: The default fill_method=&#39;pad&#39; in DataFrame.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify &#39;fill_method=None&#39; to not fill NA values.
+  (currency.pct_change().std()*ANNUALIZE).plot.bar(title=&#39;Volatility of Exchange Rate Changes&#39;);
+</pre></div>
+</div>
+<img alt="../_images/04833229d954681221244e9a1b390d6ca9f22c49dc3d2a283723300a54d121f3.png" src="../_images/04833229d954681221244e9a1b390d6ca9f22c49dc3d2a283723300a54d121f3.png" />
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>References<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="economics-of-crytpo">
+<h3>Economics of Crytpo<a class="headerlink" href="#economics-of-crytpo" title="Link to this heading">#</a></h3>
+<p>Recommend this textbook chapter (published freely)</p>
+<p><a class="reference external" href="https://marginalrevolution.com/wp-content/uploads/2022/05/Cryptoeconomics-Modern-Principles.pdf">https://marginalrevolution.com/wp-content/uploads/2022/05/Cryptoeconomics-Modern-Principles.pdf</a></p>
+</section>
+<section id="blockchain">
+<h3>Blockchain<a class="headerlink" href="#blockchain" title="Link to this heading">#</a></h3>
+<p>Highly recommend this video</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=bBC-nXj3Ng4">https://www.youtube.com/watch?v=bBC-nXj3Ng4</a></p>
+</section>
+<section id="explore-the-blockchain">
+<h3>Explore the blockchain<a class="headerlink" href="#explore-the-blockchain" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.blockchain.com/explorer">https://www.blockchain.com/explorer</a></p>
+</section>
+<section id="cryptographic-security">
+<h3>Cryptographic security<a class="headerlink" href="#cryptographic-security" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=S9JGmA5_unY">https://www.youtube.com/watch?v=S9JGmA5_unY</a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_notebook_build"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="_D.4.%20Commodity%20Futures.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">D.4. Commodity Futures</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">D.6. Currency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markets-foundations">Markets Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uchicago-financial-mathematics">UChicago Financial Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2023">September 2023</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#currency">Currency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notable-features">Notable Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-free-rates">Risk-free rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-rates">Exchange rates</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#returns">Returns</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-components-to-returns">Two components to returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-statistics-on-returns">Extra Statistics on Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposing-the-returns">Decomposing the Returns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithms">Logarithms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excess-returns">Excess returns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-spreads">Two spreads</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-consideration">Data Consideration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptocurrency">Cryptocurrency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crypto-data">Crypto Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economics-of-crytpo">Economics of Crytpo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blockchain">Blockchain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-blockchain">Explore the blockchain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cryptographic-security">Cryptographic security</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mark Hendricks
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

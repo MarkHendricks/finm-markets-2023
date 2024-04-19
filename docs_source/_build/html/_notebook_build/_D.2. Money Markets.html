@@ -1,0 +1,1048 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>D.2. Money Markets &#8212; FINM Markets</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_notebook_build/_D.2. Money Markets';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="D.3. Inflation" href="_D.3.%20Inflation.html" />
+    <link rel="prev" title="D.1.X Debt Markets" href="_D.1.X.%20Debt%20Markets.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="FINM Markets - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="FINM Markets - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    My Blank Project
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="_D.0.%20Introduction.html">D.0. Introduction</a></li>
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../myst_markdown_demos.html">MyST Markdown Demos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="_D.1.%20Treasury%20Debt.html">D.1. Treasury Debt</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="_D.1.X.%20Debt%20Markets.html">D.1.X Debt Markets</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D.2. Money Markets</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_D.3.%20Inflation.html">D.3. Inflation</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_D.4.%20Commodity%20Futures.html">D.4. Commodity Futures</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_D.6.%20Currency.html">D.6. Currency</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarkHendricks/finm-markets-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarkHendricks/finm-markets-2023/issues/new?title=Issue%20on%20page%20%2F_notebook_build/_D.2. Money Markets.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_notebook_build/_D.2. Money Markets.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>D.2. Money Markets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">D.2. Money Markets</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markets-foundations">Markets Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uchicago-financial-mathematics">UChicago Financial Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2023">September 2023</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-money-markets">Overview of Money Markets</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fed-funds-rate">Fed Funds Rate</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excess-reserves">Excess Reserves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-discount-window">The Discount Window</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#secured-overnight-financing-rate-sofr">Secured Overnight Financing Rate (SOFR)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sofr-index">The SOFR Index</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sofr-vs-libor">SOFR vs LIBOR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-sofr-aspects">Key SOFR Aspects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blip-in-oct-2019">Blip in Oct, 2019</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-sofr">More on SOFR</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eurodollars">Eurodollars</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#repo">Repo</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repo-risk">Repo risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-repo">Why Repo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repo-references">Repo References</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repo-haircuts-and-rates-distributions">Repo Haircuts and Rates Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifma-charts">SIFMA Charts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#other-money-market-rates">Other Money Market Rates</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#certificates-of-deposit">Certificates of Deposit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commercial-paper">Commercial Paper</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#money-market-funds">Money Market Funds</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-of-money-market-funds">Risk of money market funds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#money-market-funds-in-the-crisis">Money market funds in the crisis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-free-rate">Risk-Free Rate?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libor">LIBOR</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-in-cme-derivatives">Transition in CME Derivatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-in-swaps">Transition in swaps</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="d-2-money-markets">
+<h1>D.2. Money Markets<a class="headerlink" href="#d-2-money-markets" title="Link to this heading">#</a></h1>
+<section id="markets-foundations">
+<h2>Markets Foundations<a class="headerlink" href="#markets-foundations" title="Link to this heading">#</a></h2>
+<section id="uchicago-financial-mathematics">
+<h3>UChicago Financial Mathematics<a class="headerlink" href="#uchicago-financial-mathematics" title="Link to this heading">#</a></h3>
+<section id="september-2023">
+<h4>September 2023<a class="headerlink" href="#september-2023" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Mark Hendricks</p></li>
+<li><p><a class="reference external" href="mailto:hendricks&#37;&#52;&#48;uchicago&#46;edu">hendricks<span>&#64;</span>uchicago<span>&#46;</span>edu</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;../cmds&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">treasury_cmds</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="overview-of-money-markets">
+<h1>Overview of Money Markets<a class="headerlink" href="#overview-of-money-markets" title="Link to this heading">#</a></h1>
+<img alt="../_images/money_markets_BB.png" src="../_images/money_markets_BB.png" />
+<p>Reference: Bloomberg <code class="docutils literal notranslate"><span class="pre">BTMM</span></code></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fed-funds-rate">
+<h1>Fed Funds Rate<a class="headerlink" href="#fed-funds-rate" title="Link to this heading">#</a></h1>
+<p>The Fed Funds rate is the rate at which private banks agree to lend each other money overnight.</p>
+<ul class="simple">
+<li><p>It is a transaction between two private parties, so the rate is determined by market forces.</p></li>
+<li><p>Still, the Fed has a great ability to manipulate this rate through the money supply.</p></li>
+<li><p>Thus, monetary policy is typically discussed in terms of targeting the Fed Funds rate.</p></li>
+<li><p>The rate gets its name because the Fed sets a reserve requirement that the banks must have in their vaults overnight.</p></li>
+<li><p>Thus, the overnight lending between banks is really about having the funds mandated by the Fed.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ticks = [&#39;EFFR&#39;,&#39;DFEDTARU&#39;,&#39;DFEDTARL&#39;]</span>
+<span class="c1"># leg = info.loc[ticks,&#39;description&#39;].to_list()</span>
+
+<span class="c1"># data[ticks].plot(xlim=(&#39;2008&#39;,data.index[-1]),ylim=[-.05,3])</span>
+<span class="c1"># plt.legend(leg)</span>
+<span class="c1"># plt.show()</span>
+
+<span class="c1"># data[ticks].plot(xlim=(&#39;2020-03-01&#39;,data.index[-1]),ylim=(-.05,1.1))</span>
+<span class="c1"># plt.legend(leg)</span>
+<span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="excess-reserves">
+<h2>Excess Reserves<a class="headerlink" href="#excess-reserves" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ioer = data[[&#39;IOER&#39;]].dropna().rename(columns={&#39;IOER&#39;:&#39;reserve rate&#39;})</span>
+<span class="c1"># iorb = data[[&#39;IORB&#39;]].dropna().rename(columns={&#39;IORB&#39;:&#39;reserve rate&#39;})</span>
+<span class="c1"># rate_reserves = pd.concat([ioer.iloc[:-1], iorb],axis=0)</span>
+
+<span class="c1"># fig, ax = plt.subplots(2,1,figsize=(12,12))</span>
+<span class="c1"># rate_reserves.plot(ax=ax[0], title=&#39;Interest Rate on Excess Reserves&#39;, legend=[], xlim=(&#39;2008&#39;,None),ylabel=&#39;rate (%)&#39;,linewidth=3)</span>
+<span class="c1"># (data[[&#39;EXCSRESNW&#39;]]/1000).plot(ax=ax[1],title=&#39;Excess Reserves&#39;,xlim=(&#39;2008&#39;,None),ylabel=&#39;billions USD&#39;,color=&#39;r&#39;,linewidth=3)</span>
+
+<span class="c1"># plt.tight_layout()</span>
+<span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-discount-window">
+<h2>The Discount Window<a class="headerlink" href="#the-discount-window" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ticks = [&#39;EFFR&#39;,&#39;DPCREDIT&#39;]</span>
+<span class="c1"># leg = info.loc[ticks,&#39;description&#39;].to_list()</span>
+
+<span class="c1"># data[ticks].plot(linewidth=3,title=&#39;Fed Rates&#39;)</span>
+<span class="c1"># plt.legend(leg)</span>
+<span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="fed_bb_dashboard.png" src="refs/fed_bb_dashboard.png" /></p>
+<section id="source">
+<h3>Source<a class="headerlink" href="#source" title="Link to this heading">#</a></h3>
+<p>Bloomberg FDTR</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="secured-overnight-financing-rate-sofr">
+<h1>Secured Overnight Financing Rate (SOFR)<a class="headerlink" href="#secured-overnight-financing-rate-sofr" title="Link to this heading">#</a></h1>
+<section id="the-sofr-index">
+<h2>The SOFR Index<a class="headerlink" href="#the-sofr-index" title="Link to this heading">#</a></h2>
+<p>The big picture</p>
+<ul class="simple">
+<li><p>Tracks the interbank overnight interest rate.</p></li>
+</ul>
+<p>Sourcing:</p>
+<ul class="simple">
+<li><p>First published April 3, 2018</p></li>
+<li><p>SOFR is an index published by the NY Fed in cooperation with the U.S. Office of Financial Research.</p></li>
+<li><p>Based on Treasury repo transactions.</p>
+<ul>
+<li><p>Tri-party cleared and settled by the Bank of New York Mellon.</p></li>
+<li><p>Bilateral cleared through FICC</p></li>
+</ul>
+</li>
+</ul>
+<section id="sofr-vs-libor">
+<h3>SOFR vs LIBOR<a class="headerlink" href="#sofr-vs-libor" title="Link to this heading">#</a></h3>
+<p><strong>LIBOR</strong> is the London InterBank Offer Rate.</p>
+<ul class="simple">
+<li><p>Based on a panel of banks’ estimates for borrowing/lending costs.</p></li>
+<li><p>For various reasons, it is being phased out.</p></li>
+<li><p>This phaseout was discussed for 10 years, but the market is finally making the transition.</p></li>
+</ul>
+</section>
+<section id="key-sofr-aspects">
+<h3>Key SOFR Aspects<a class="headerlink" href="#key-sofr-aspects" title="Link to this heading">#</a></h3>
+<p>Secured</p>
+<ul class="simple">
+<li><p>Rate of collateralized borrowing/lending via repo on U.S. Treasuries.</p></li>
+</ul>
+<p>Overnight</p>
+<ul class="simple">
+<li><p>Rate is historic, based on the previous overnight lending.</p></li>
+<li><p>Rate is backed by actual transactions, not surveys or estimates.</p></li>
+<li><p>No set of tenors (term structure) to SOFR. It is just an overnight rate.</p></li>
+<li><p>One can impute a term structure of SOFR-related rates from derivatives based on SOFR.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../data/ref_rates.xlsx&#39;</span>
+<span class="n">refrates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">refrates</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tbill 3m&#39;</span><span class="p">,</span><span class="s1">&#39;FedFunds Effective&#39;</span><span class="p">,</span><span class="s1">&#39;SOFR&#39;</span><span class="p">]</span>
+
+<span class="n">refrates</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">refrates</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/dc8c9a07284d327bbb53ce9fa674c33ff45dc02f936f5e51f0716476df1e95a5.png" src="../_images/dc8c9a07284d327bbb53ce9fa674c33ff45dc02f936f5e51f0716476df1e95a5.png" />
+<img alt="../_images/ae8ed220d66b0d7e3043158ff3c0951690bb8dba81c12fd8e495d0c4d45d96f3.png" src="../_images/ae8ed220d66b0d7e3043158ff3c0951690bb8dba81c12fd8e495d0c4d45d96f3.png" />
+</div>
+</div>
+</section>
+<section id="blip-in-oct-2019">
+<h3>Blip in Oct, 2019<a class="headerlink" href="#blip-in-oct-2019" title="Link to this heading">#</a></h3>
+<p>SOFR spikes briefly.</p>
+<p>This is not an error in the graph.</p>
+<p>Stressed markets (institutional issues) caused this temporary spike.</p>
+<ul class="simple">
+<li><p>Reason for concern for SOFR as new benchmark.</p></li>
+<li><p>Has not had any such issue in the past few years, including Mar 2020 with COVID market jumps.</p></li>
+</ul>
+</section>
+</section>
+<section id="more-on-sofr">
+<h2>More on SOFR<a class="headerlink" href="#more-on-sofr" title="Link to this heading">#</a></h2>
+<section id="data">
+<h3>Data:<a class="headerlink" href="#data" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Published in the Fed H.15. Release</p></li>
+<li><p>Accessed easily in the Fed’s FRED data platform</p></li>
+<li><p>Full methodology</p></li>
+</ul>
+<p><a class="reference external" href="https://www.newyorkfed.org/medialibrary/Microsites/arrc/files/2021/users-guide-to-sofr2021-update.pdf">https://www.newyorkfed.org/medialibrary/Microsites/arrc/files/2021/users-guide-to-sofr2021-update.pdf</a></p>
+</section>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<p>CME has a useful course to learn more about SOFR.</p>
+<p><a class="reference external" href="https://www.cmegroup.com/education/courses/introduction-to-sofr.html">https://www.cmegroup.com/education/courses/introduction-to-sofr.html</a></p>
+<ul class="simple">
+<li><p>CME offers futures contracts based on SOFR</p></li>
+<li><p>So the material is somewhat focused on this aspect.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="eurodollars">
+<h1>Eurodollars<a class="headerlink" href="#eurodollars" title="Link to this heading">#</a></h1>
+<p>A Eurodollar is a dollar deposited in a bank outside the U.S. It is widely used in interest-rate futures.</p>
+<ul class="simple">
+<li><p>The Eurodollar rate is the interest earned on these dollar-denominated deposits held by banks outside the U.S, (in many countries besides Europe.)</p></li>
+<li><p>The Federal Reserve reports of the Eurodollar rate tend to match the LIBOR rate.</p></li>
+<li><p>The Fed publishes the Eurodollar rate on release H.15.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="repo">
+<h1>Repo<a class="headerlink" href="#repo" title="Link to this heading">#</a></h1>
+<p>A repurchase agreement (repo) is a contract where a dealer sells securities to another party with a deal to buy them back at a later date at a predetermined price.</p>
+<ul class="simple">
+<li><p>Repo is a common form of short-term borrowing.</p></li>
+<li><p>The difference between the selling price and the re-purchase price is the interest paid. This effective interest rate is the repo rate.</p></li>
+<li><p>The difference between the value of the collateral and the sell price is the haircut on the repo.</p></li>
+<li><p>The repo is, in essence, a collateralized loan.</p></li>
+</ul>
+<section id="example">
+<h2>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<p>Suppose an asset has a market value of \<span class="math notranslate nohighlight">\(100 and a bank sells it for \\\)</span>80 with an agreement to repurchase it for \$88.</p>
+<ul class="simple">
+<li><p>The repo rate is 10%. <span class="math notranslate nohighlight">\(\frac{88−80}{80}\)</span></p></li>
+<li><p>The haircut is 20%. <span class="math notranslate nohighlight">\(\frac{100−80}{100}\)</span></p></li>
+</ul>
+</section>
+<section id="repo-risk">
+<h2>Repo risk<a class="headerlink" href="#repo-risk" title="Link to this heading">#</a></h2>
+<p>Repo is considered very safe as the security transacted serves as collateral against default by either party.</p>
+<ul class="simple">
+<li><p>The most common repo is overnight. Longer term repos are referred to as term repo.</p></li>
+<li><p>Notably, the repo security is not subject to bankruptcy procedures. Either party can “walk away” if counterparty defaults.</p></li>
+</ul>
+</section>
+<section id="why-repo">
+<h2>Why Repo?<a class="headerlink" href="#why-repo" title="Link to this heading">#</a></h2>
+<p>Repo is part of the core infrastructure of financial transactions.</p>
+<p>What important functions does it serve?</p>
+</section>
+<section id="repo-references">
+<h2>Repo References<a class="headerlink" href="#repo-references" title="Link to this heading">#</a></h2>
+<section id="repo-haircuts-and-rates-distributions">
+<h3>Repo Haircuts and Rates Distributions<a class="headerlink" href="#repo-haircuts-and-rates-distributions" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.federalreserve.gov/econres/notes/feds-notes/the-dynamics-of-the-us-overnight-triparty-repo-market-20210802.html">https://www.federalreserve.gov/econres/notes/feds-notes/the-dynamics-of-the-us-overnight-triparty-repo-market-20210802.html</a></p>
+</section>
+<section id="sifma-charts">
+<h3>SIFMA Charts<a class="headerlink" href="#sifma-charts" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.sifma.org/resources/research/reports/us-repo-market-chart-book/">https://www.sifma.org/resources/research/reports/us-repo-market-chart-book/</a>
+<a class="reference external" href="https://www.sifma.org/wp-content/uploads/2022/02/SIFMA-Research-US-Repo-Markets-Chart-Book-2022.pdf">https://www.sifma.org/wp-content/uploads/2022/02/SIFMA-Research-US-Repo-Markets-Chart-Book-2022.pdf</a></p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="other-money-market-rates">
+<h1>Other Money Market Rates<a class="headerlink" href="#other-money-market-rates" title="Link to this heading">#</a></h1>
+<section id="certificates-of-deposit">
+<h2>Certificates of Deposit<a class="headerlink" href="#certificates-of-deposit" title="Link to this heading">#</a></h2>
+<p>A certificates of deposit (CD) is a time deposit where the bank pays back principal and interest at the end of a fixed term.</p>
+<ul class="simple">
+<li><p>A CD is considered a savings account, and are thus FDIC insured.</p></li>
+<li><p>Deposits can not be withdrawn on demand.</p></li>
+<li><p>A large enough CD, (say \$100,000,) is typically transferable,
+so there is a market for these.</p></li>
+<li><p>Most traded CD’s have a very short maturity, (3 months or less.)</p></li>
+</ul>
+</section>
+<section id="commercial-paper">
+<h2>Commercial Paper<a class="headerlink" href="#commercial-paper" title="Link to this heading">#</a></h2>
+<p>Commercial paper is short-term, unsecured debt issued by firms.</p>
+<ul class="simple">
+<li><p>This is an important source of funding for nonfinancial firms.</p></li>
+<li><p>The paper typically matures in one to two months. It must be less than 270 days in order to avoid SEC registration and regulation.</p></li>
+<li><p>The paper is typically issued in \$100,000 denominations.</p></li>
+<li><p>While the paper is unsecured, its short maturity makes it relatively safe.</p></li>
+</ul>
+</section>
+<section id="money-market-funds">
+<h2>Money Market Funds<a class="headerlink" href="#money-market-funds" title="Link to this heading">#</a></h2>
+<p>Money market funds provide small investors with access to money market securities.</p>
+<ul class="simple">
+<li><p>Money market mutual funds aim to keep net asset value (NAV), or share value constant at $1. The interest rate paid out fluctuates with the return of the assets in the fund.</p></li>
+<li><p>Money market mutual funds have become an important funding source for money market instruments.</p></li>
+</ul>
+<p>The data</p>
+<p><a class="reference external" href="https://fred.stlouisfed.org/series/MMMFFAQ027S">https://fred.stlouisfed.org/series/MMMFFAQ027S</a></p>
+<section id="risk-of-money-market-funds">
+<h3>Risk of money market funds<a class="headerlink" href="#risk-of-money-market-funds" title="Link to this heading">#</a></h3>
+<p>Money market funds have been very successful in maintaining NAV at $1.</p>
+<ul class="simple">
+<li><p>Furthermore, money market funds have restrictions to enhance safety.</p></li>
+<li><p>Average maturity of securities had to be less than 90 days. In response to crisis, moved to 60.</p></li>
+<li><p>Enhanced rules on allocations, ratings of investments, etc.</p></li>
+</ul>
+</section>
+<section id="money-market-funds-in-the-crisis">
+<h3>Money market funds in the crisis<a class="headerlink" href="#money-market-funds-in-the-crisis" title="Link to this heading">#</a></h3>
+<p>If the share value of the market fund falls below \$1, it is said to “break the buck.”</p>
+<ul class="simple">
+<li><p>Given the safe assets held by the fund, this is a very unlikely event. Until 2008, it had only happened once.</p></li>
+<li><p>When Lehman failed, its commercial paper was worthless. This caused a fund to break the buck and another to liquidate due to redemptions.</p></li>
+<li><p>The U.S. Treasury intervened and offered insurance like FDIC.</p></li>
+<li><p>At the end of 2008, the balance in money market funds was at $3,757. (Source: Flow of Funds. Board of Governors.)</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="risk-free-rate">
+<h1>Risk-Free Rate?<a class="headerlink" href="#risk-free-rate" title="Link to this heading">#</a></h1>
+<p>Financial models often use a risk-free rate.</p>
+<p>This is often taken as a T-bill rate, but be careful.</p>
+<ul class="simple">
+<li><p>T-bills are used to fulfill a variety of regulatory requirements, and they are given preferential regulatory treatment.</p></li>
+<li><p>T-bills are given favorable tax treatment. (State and municipal taxes do not apply.)</p></li>
+<li><p>These facts cause extra demand for T-bills, driving the rates (artificially?) lower.</p></li>
+</ul>
+<p>Models more sensitive to the interest rate will typically use SOFR, Eurodollar, or swap rates.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="appendix">
+<h1>Appendix<a class="headerlink" href="#appendix" title="Link to this heading">#</a></h1>
+<section id="libor">
+<h2>LIBOR<a class="headerlink" href="#libor" title="Link to this heading">#</a></h2>
+<p>The London Interbank Offered Rate (LIBOR) serves as a reference short-term interest rate for the money market.</p>
+<ul class="simple">
+<li><p>This is a rate at which large banks in London will lend and borrow to each other.</p></li>
+<li><p>The rate is quoted for several currencies, with the dollar-denominated LIBOR frequently used in U.S. markets.</p></li>
+</ul>
+<section id="transition-in-cme-derivatives">
+<h3>Transition in CME Derivatives<a class="headerlink" href="#transition-in-cme-derivatives" title="Link to this heading">#</a></h3>
+<p>The LIBOR Transition is ongoing, and there are still many contracts linked to LIBOR.</p>
+<p>Per the WSJ (link below,) the following notionals of futures and options traded in CME products.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>May 2021</p></th>
+<th class="head"><p>May 2022</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LIBOR</p></td>
+<td><p>2.99</p></td>
+<td><p>2.33</p></td>
+</tr>
+<tr class="row-odd"><td><p>SOFR</p></td>
+<td><p>0.19</p></td>
+<td><p>1.90</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="transition-in-swaps">
+<h3>Transition in swaps<a class="headerlink" href="#transition-in-swaps" title="Link to this heading">#</a></h3>
+<img alt="../_images/swap_volume_libor_transition.png" src="../_images/swap_volume_libor_transition.png" />
+<section id="id1">
+<h4>References<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p><a class="reference external" href="https://www.bloomberg.com/professional/blog/sofr-liquidity-eclipses-libor/">https://www.bloomberg.com/professional/blog/sofr-liquidity-eclipses-libor/</a></p>
+<p><a class="reference external" href="https://www.wsj.com/articles/companies-keep-libor-on-the-books-despite-push-to-new-benchmark-11654594202?st=hnvr9wnr4nlgoqp&amp;amp;reflink=desktopwebshare_permalink">https://www.wsj.com/articles/companies-keep-libor-on-the-books-despite-push-to-new-benchmark-11654594202?st=hnvr9wnr4nlgoqp&amp;reflink=desktopwebshare_permalink</a></p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_notebook_build"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="_D.1.X.%20Debt%20Markets.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">D.1.X Debt Markets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="_D.3.%20Inflation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">D.3. Inflation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">D.2. Money Markets</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markets-foundations">Markets Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uchicago-financial-mathematics">UChicago Financial Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2023">September 2023</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-money-markets">Overview of Money Markets</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fed-funds-rate">Fed Funds Rate</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excess-reserves">Excess Reserves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-discount-window">The Discount Window</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#secured-overnight-financing-rate-sofr">Secured Overnight Financing Rate (SOFR)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sofr-index">The SOFR Index</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sofr-vs-libor">SOFR vs LIBOR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-sofr-aspects">Key SOFR Aspects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blip-in-oct-2019">Blip in Oct, 2019</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-sofr">More on SOFR</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eurodollars">Eurodollars</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#repo">Repo</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repo-risk">Repo risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-repo">Why Repo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repo-references">Repo References</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repo-haircuts-and-rates-distributions">Repo Haircuts and Rates Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifma-charts">SIFMA Charts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#other-money-market-rates">Other Money Market Rates</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#certificates-of-deposit">Certificates of Deposit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commercial-paper">Commercial Paper</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#money-market-funds">Money Market Funds</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-of-money-market-funds">Risk of money market funds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#money-market-funds-in-the-crisis">Money market funds in the crisis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-free-rate">Risk-Free Rate?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libor">LIBOR</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-in-cme-derivatives">Transition in CME Derivatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-in-swaps">Transition in swaps</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mark Hendricks
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
