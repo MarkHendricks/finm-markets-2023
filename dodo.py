@@ -12,6 +12,7 @@ import sys
 sys.path.insert(1, "./cmds/")
 
 from os import getcwd
+import shutil
 
 ## Custom reporter: Print PyDoit Text in Green
 # This is helpful because some tasks write to sterr and pollute the output in
@@ -239,7 +240,7 @@ def task_convert_notebooks_to_scripts():
             "actions": [
                 # jupyter_execute_notebook(notebook_name),
                 # jupyter_to_html(notebook_name),
-                # copy_notebook_to_folder(notebook_name, Path("./src"), "./docs/_notebook_build/"),
+                # copy_notebook_to_folder(notebook_name, Path("./src"), "./docs_source/_notebook_build/"),
                 jupyter_clear_output(notebook_name),
                 jupyter_to_python(notebook_name, build_dir),
             ],
@@ -262,7 +263,7 @@ def task_run_notebooks():
                 jupyter_execute_notebook(notebook_name),
                 jupyter_to_html(notebook_name),
                 copy_notebook_to_folder(
-                    notebook_name, Path("./discussions"), "./docs/_notebook_build/"
+                    notebook_name, Path("./discussions"), "./docs_source/_notebook_build/"
                 ),
                 jupyter_clear_output(notebook_name),
                 # jupyter_to_python(notebook_name, build_dir),
@@ -283,17 +284,17 @@ def task_run_notebooks():
 # def task_compile_sphinx_docs():
 #     """Compile Sphinx Docs"""
 #     file_dep = [
-#         "./docs/conf.py",
-#         "./docs/index.rst",
-#         "./docs/myst_markdown_demos.md",
+#         "./docs_source/conf.py",
+#         "./docs_source/index.rst",
+#         "./docs_source/myst_markdown_demos.md",
 #     ]
 #     targets = [
-#         "./docs/_build/html/index.html",
-#         "./docs/_build/html/myst_markdown_demos.html",
+#         "./docs_source/_build/html/index.html",
+#         "./docs_source/_build/html/myst_markdown_demos.html",
 #     ]
 
 #     return {
-#         "actions": ["sphinx-build -M html ./docs/ ./docs/_build"],
+#         "actions": ["sphinx-build -M html ./docs_source/ ./docs_source/_build"],
 #         "targets": targets,
 #         "file_dep": file_dep,
 #         "task_dep": ["run_notebooks"],
@@ -305,24 +306,76 @@ def task_compile_book():
     """Run jupyter-book build to compile the book."""
 
     file_dep = [
-        "./docs/myst_markdown_demos.md",
-        "./docs/_config.yml",
-        "./docs/_toc.yml",
+        "./docs_source/myst_markdown_demos.md",
+        "./docs_source/_config.yml",
+        "./docs_source/_toc.yml",
     ]
 
     targets = [
-        "./docs/_build/html/index.html",
-        "./docs/_build/html/myst_markdown_demos.html",
+        "./docs_source/_build/html/index.html",
+        "./docs_source/_build/html/myst_markdown_demos.html",
     ]
 
     return {
         "actions": [
-            # "jupyter-book build -W ./docs",
-            "jupyter-book build ./docs",
+            # "jupyter-book build -W ./docs_source",
+            "jupyter-book build ./docs_source",
         ],
         "targets": targets,
         "file_dep": file_dep,
         "clean": True,
         "task_dep": ["run_notebooks"],
+    }
+
+
+GITHUB_PAGES_REPO_DIR = Path("./docs/")
+def copy_build_files_to_github_page_dir():
+    # shutil.rmtree(GITHUB_PAGES_REPO_DIR, ignore_errors=True)
+    # shutil.copytree(BUILD_DIR, GITHUB_PAGES_REPO_DIR)
+
+    ## Copy docs_source
+    for item in (Path("./docs_source/")).iterdir():
+        if item.is_file():
+            target_file = GITHUB_PAGES_REPO_DIR / item.name
+            if target_file.exists():
+                target_file.unlink()
+            shutil.copy2(item, GITHUB_PAGES_REPO_DIR)
+        elif item.is_dir():
+            target_dir = GITHUB_PAGES_REPO_DIR / item.name
+            if target_dir.exists():
+                shutil.rmtree(target_dir)
+            shutil.copytree(item, target_dir)
+
+    # Copy _build Folder
+    for item in (Path("./docs_source/_build") / "html").iterdir():
+        if item.is_file():
+            target_file = GITHUB_PAGES_REPO_DIR / item.name
+            if target_file.exists():
+                target_file.unlink()
+            shutil.copy2(item, GITHUB_PAGES_REPO_DIR)
+        elif item.is_dir():
+            target_dir = GITHUB_PAGES_REPO_DIR / item.name
+            if target_dir.exists():
+                shutil.rmtree(target_dir)
+            shutil.copytree(item, target_dir)
+
+    nojekyll_file = GITHUB_PAGES_REPO_DIR / ".nojekyll"
+    if not nojekyll_file.exists():
+        nojekyll_file.touch()
+
+
+def task_copy_compiled_book_to_github_pages_repo():
+    """copy_compiled_book_to_github_pages_repo"""
+    targets = [
+        "./docs/index.html",
+    ]
+
+    return {
+        "actions": [
+            copy_build_files_to_github_page_dir,
+        ],
+        "targets": targets,
+        "task_dep": ["compile_book"],
+        "clean": True,
     }
 

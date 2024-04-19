@@ -1,0 +1,2435 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>D.4. Commodity Futures &#8212; FINM Markets</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_notebook_build/_D.4. Commodity Futures';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="D.6. Currency" href="_D.6.%20Currency.html" />
+    <link rel="prev" title="D.3. Inflation" href="_D.3.%20Inflation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="FINM Markets - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="FINM Markets - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    My Blank Project
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="_D.0.%20Introduction.html">D.0. Introduction</a></li>
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../myst_markdown_demos.html">MyST Markdown Demos</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="_D.1.%20Treasury%20Debt.html">D.1. Treasury Debt</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="_D.1.X.%20Debt%20Markets.html">D.1.X Debt Markets</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_D.2.%20Money%20Markets.html">D.2. Money Markets</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_D.3.%20Inflation.html">D.3. Inflation</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">D.4. Commodity Futures</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="_D.6.%20Currency.html">D.6. Currency</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarkHendricks/finm-markets-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarkHendricks/finm-markets-2023/issues/new?title=Issue%20on%20page%20%2F_notebook_build/_D.4. Commodity Futures.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_notebook_build/_D.4. Commodity Futures.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>D.4. Commodity Futures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">D.4. Commodity Futures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markets-foundations">Markets Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uchicago-financial-mathematics">UChicago Financial Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2023">September 2023</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assets">Assets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-on-variety">Data on Variety</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variety-of-means-and-volatilities">Variety of means and volatilities</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trading">Trading</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchanges">Exchanges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardization">Standardization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing">Clearing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settlement">Settlement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quoting-conventions">Quoting Conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple">Multiple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tick-size">Tick Size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-interest">Open Interest</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-positions">Closing Positions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#active-contract">Active Contract</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#liquidity">Liquidity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#margins-and-marking-to-market">Margins and Marking to Market</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#futures-references">Futures References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pricing">Pricing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-price">Forward Price</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carry">Carry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dividend-yield">Dividend yield</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#storage-cost">Storage cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Carry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convenience-yield">Convenience Yield</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-price-for-oil">Negative Price for Oil?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complications">Complications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-interest-rates">Moving Interest Rates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-settlement">Daily Settlement</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futures-vs-forwards">Futures vs Forwards</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-futures-curve">The Futures Curve</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-curve">Defining the Curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backwardation-and-contango">Backwardation and Contango</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-to-expectations">Relative to expectations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economics">Economics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normal">Normal?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-to-pricing-equations-above">Relation to pricing equations above</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptions-of-the-futures-curve">Descriptions of the futures curve</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#common-usage">Common usage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-examples-above">In the examples above</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roll">Roll</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-contract">Continuous Contract</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-indexes">Generic indexes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-front-and-back">Generic front and back</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-the-continuous-series">Rolling the Continuous Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-the-continuous-series">Adjusting the Continuous Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#so-which-adjustment-to-use">So which adjustment to use?</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roll-rule">Roll Rule</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#careful-with-the-roll-method">Careful with the roll method</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="d-4-commodity-futures">
+<h1>D.4. Commodity Futures<a class="headerlink" href="#d-4-commodity-futures" title="Link to this heading">#</a></h1>
+<section id="markets-foundations">
+<h2>Markets Foundations<a class="headerlink" href="#markets-foundations" title="Link to this heading">#</a></h2>
+<section id="uchicago-financial-mathematics">
+<h3>UChicago Financial Mathematics<a class="headerlink" href="#uchicago-financial-mathematics" title="Link to this heading">#</a></h3>
+<section id="september-2023">
+<h4>September 2023<a class="headerlink" href="#september-2023" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Mark Hendricks</p></li>
+<li><p><a class="reference external" href="mailto:hendricks&#37;&#52;&#48;uchicago&#46;edu">hendricks<span>&#64;</span>uchicago<span>&#46;</span>edu</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="p">(</span><span class="n">MultipleLocator</span><span class="p">,</span>
+                               <span class="n">FormatStrFormatter</span><span class="p">,</span>
+                               <span class="n">AutoMinorLocator</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;../cmds&#39;</span><span class="p">)</span>
+<span class="c1">#from utils import *</span>
+<span class="kn">from</span> <span class="nn">portfolio</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LOADFILE</span> <span class="o">=</span> <span class="s1">&#39;../data/futures_data.xlsx&#39;</span>
+<span class="n">futures_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">LOADFILE</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;futures contracts&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;symbol&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="definition">
+<h1>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h1>
+<p>A futures contract is an agreement</p>
+<ul class="simple">
+<li><p>entered at <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>to purchase an asset at <span class="math notranslate nohighlight">\(T\)</span></p></li>
+<li><p>for a price <span class="math notranslate nohighlight">\(F\)</span></p></li>
+</ul>
+<p>It is an obligation, not an option!</p>
+<p>We will return to some key differences between futures and forwards.</p>
+<section id="assets">
+<h2>Assets<a class="headerlink" href="#assets" title="Link to this heading">#</a></h2>
+<p>Futures contracts are an important way to trade commodities including</p>
+<ul class="simple">
+<li><p>energy</p></li>
+<li><p>metals</p></li>
+<li><p>grains</p></li>
+<li><p>livestock</p></li>
+</ul>
+<p>Futures contracts are traded widely on many assets beyond commodities:</p>
+<ul class="simple">
+<li><p>interest-rate products</p></li>
+<li><p>currency</p></li>
+<li><p>equity indexes</p></li>
+<li><p>other indexes</p></li>
+</ul>
+</section>
+<section id="data-on-variety">
+<h2>Data on Variety<a class="headerlink" href="#data-on-variety" title="Link to this heading">#</a></h2>
+<p>The correlation heatmap below gives a sense of the range of products.</p>
+<ul class="simple">
+<li><p>Most bond correlations are 80%+</p></li>
+<li><p>Most stock correlations are 60%+</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ADJLAB</span> <span class="o">=</span> <span class="s1">&#39;roll=ratio&#39;</span>
+<span class="n">futures_hist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">LOADFILE</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;continuous futures </span><span class="si">{</span><span class="n">ADJLAB</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+<span class="n">corrmat</span> <span class="o">=</span> <span class="n">futures_hist</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2015&#39;</span><span class="p">:,:]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corrmat</span><span class="p">,</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b8c05f3ac7aa3f2e616162e05b5094240b1d8160a4a8d0a4f315045e9511a74c.png" src="../_images/b8c05f3ac7aa3f2e616162e05b5094240b1d8160a4a8d0a4f315045e9511a74c.png" />
+</div>
+</div>
+</section>
+<section id="variety-of-means-and-volatilities">
+<h2>Variety of means and volatilities<a class="headerlink" href="#variety-of-means-and-volatilities" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">px</span> <span class="o">=</span> <span class="n">futures_hist</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">px</span><span class="p">[</span><span class="n">px</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">rx</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="n">performanceMetrics</span><span class="p">(</span><span class="n">rx</span><span class="p">,</span><span class="n">annualization</span><span class="o">=</span><span class="mi">252</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:.1%}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Jeremy\AppData\Local\Temp\ipykernel_30080\618519834.py:3: FutureWarning: The default fill_method=&#39;pad&#39; in DataFrame.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify &#39;fill_method=None&#39; to not fill NA values.
+  rx = px.pct_change().dropna()
+</pre></div>
+</div>
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_fc41b">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_fc41b_level0_col0" class="col_heading level0 col0" >Mean</th>
+      <th id="T_fc41b_level0_col1" class="col_heading level0 col1" >Vol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_fc41b_level0_row0" class="row_heading level0 row0" >CL1</th>
+      <td id="T_fc41b_row0_col0" class="data row0 col0" >17.8%</td>
+      <td id="T_fc41b_row0_col1" class="data row0 col1" >53.5%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row1" class="row_heading level0 row1" >NG1</th>
+      <td id="T_fc41b_row1_col0" class="data row1 col0" >11.1%</td>
+      <td id="T_fc41b_row1_col1" class="data row1 col1" >64.5%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row2" class="row_heading level0 row2" >GC1</th>
+      <td id="T_fc41b_row2_col0" class="data row2 col0" >6.1%</td>
+      <td id="T_fc41b_row2_col1" class="data row2 col1" >14.9%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row3" class="row_heading level0 row3" >LA1</th>
+      <td id="T_fc41b_row3_col0" class="data row3 col0" >0.6%</td>
+      <td id="T_fc41b_row3_col1" class="data row3 col1" >22.4%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row4" class="row_heading level0 row4" >KC1</th>
+      <td id="T_fc41b_row4_col0" class="data row4 col0" >6.2%</td>
+      <td id="T_fc41b_row4_col1" class="data row4 col1" >33.0%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row5" class="row_heading level0 row5" >C</th>
+      <td id="T_fc41b_row5_col0" class="data row5 col0" >14.7%</td>
+      <td id="T_fc41b_row5_col1" class="data row5 col1" >23.4%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row6" class="row_heading level0 row6" >LC1</th>
+      <td id="T_fc41b_row6_col0" class="data row6 col0" >3.7%</td>
+      <td id="T_fc41b_row6_col1" class="data row6 col1" >16.3%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row7" class="row_heading level0 row7" >LH1</th>
+      <td id="T_fc41b_row7_col0" class="data row7 col0" >1.9%</td>
+      <td id="T_fc41b_row7_col1" class="data row7 col1" >35.0%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row8" class="row_heading level0 row8" >ES1</th>
+      <td id="T_fc41b_row8_col0" class="data row8 col0" >10.7%</td>
+      <td id="T_fc41b_row8_col1" class="data row8 col1" >20.6%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row9" class="row_heading level0 row9" >NK1</th>
+      <td id="T_fc41b_row9_col0" class="data row9 col0" >10.9%</td>
+      <td id="T_fc41b_row9_col1" class="data row9 col1" >19.6%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row10" class="row_heading level0 row10" >BP1</th>
+      <td id="T_fc41b_row10_col0" class="data row10 col0" >-0.4%</td>
+      <td id="T_fc41b_row10_col1" class="data row10 col1" >9.4%</td>
+    </tr>
+    <tr>
+      <th id="T_fc41b_level0_row11" class="row_heading level0 row11" >BTC1</th>
+      <td id="T_fc41b_row11_col0" class="data row11 col0" >33.5%</td>
+      <td id="T_fc41b_row11_col1" class="data row11 col1" >72.0%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">performanceMetrics</span><span class="p">(</span><span class="n">rx</span><span class="p">,</span><span class="n">annualization</span><span class="o">=</span><span class="mi">252</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;symbol&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vol&#39;</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">],</span><span class="n">s</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;volatility&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;symbol&#39;</span><span class="p">],</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Vol&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Futures Return Stats&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1d93988d1937a20e8130018e44600e2b3f07e9f9767bc4e36da69b1c2fa301dd.png" src="../_images/1d93988d1937a20e8130018e44600e2b3f07e9f9767bc4e36da69b1c2fa301dd.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="trading">
+<h1>Trading<a class="headerlink" href="#trading" title="Link to this heading">#</a></h1>
+<section id="exchanges">
+<h2>Exchanges<a class="headerlink" href="#exchanges" title="Link to this heading">#</a></h2>
+<p><strong>Futures</strong> trade on exchanges. In U.S. markets, the following two exchanges are of particular note:</p>
+<ul class="simple">
+<li><p>Chicago Mercantile Exchange (CME)</p></li>
+<li><p>Intercontinental Exchange (ICE)</p></li>
+</ul>
+<p>In recent years, the trading has moved to being overwhelmingly (and at many exchanges, completely,) electronic.</p>
+<section id="standardization">
+<h3>Standardization<a class="headerlink" href="#standardization" title="Link to this heading">#</a></h3>
+<p>One role of an exchange is to standardize the trading, which allows for better liquidity.</p>
+<p>This is especially useful in commodities, to set the grade, size, location of the asset.</p>
+</section>
+<section id="clearing">
+<h3>Clearing<a class="headerlink" href="#clearing" title="Link to this heading">#</a></h3>
+<p>As part of trading on an exchange, futures are <strong>centrally cleared.</strong> This is important for</p>
+<ul class="simple">
+<li><p>eliminating counterparty risk</p></li>
+<li><p>achieving better netting and margin requirements</p></li>
+</ul>
+</section>
+<section id="settlement">
+<h3>Settlement<a class="headerlink" href="#settlement" title="Link to this heading">#</a></h3>
+<p>Settlement may be via</p>
+<ul class="simple">
+<li><p>delivery of the asset</p></li>
+<li><p>cash payment equal to the spot price of the asset</p></li>
+</ul>
+<p>Note that there is cash delivery for</p>
+<ul class="simple">
+<li><p>equity indexes</p></li>
+<li><p>bitcoin (index)
+But there is also cash delivery for some physical assets</p></li>
+<li><p>Hogs are delivered via cash</p></li>
+<li><p>Cattle are delivered physically</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">futures_info</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s1">&#39;delivery type&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>category</th>
+      <th>delivery type</th>
+    </tr>
+    <tr>
+      <th>symbol</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CL</th>
+      <td>WTI CRUDE FUTURE  Aug23</td>
+      <td>Crude Oil</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>NG</th>
+      <td>NATURAL GAS FUTR  Aug23</td>
+      <td>Natural Gas</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>GC</th>
+      <td>GOLD 100 OZ FUTR  Aug23</td>
+      <td>Precious Metal</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>AH</th>
+      <td>LME PRI ALUM FUTR Aug23</td>
+      <td>Base Metal</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>KC</th>
+      <td>COFFEE 'C' FUTURE Sep23</td>
+      <td>Foodstuff</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>ZC</th>
+      <td>CORN FUTURE       Dec23</td>
+      <td>Corn</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>LE</th>
+      <td>LIVE CATTLE FUTR  Oct23</td>
+      <td>Livestock</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>HE</th>
+      <td>LEAN HOGS FUTURE  Oct23</td>
+      <td>Livestock</td>
+      <td>CASH</td>
+    </tr>
+    <tr>
+      <th>ES</th>
+      <td>S&amp;P500 EMINI FUT  Sep23</td>
+      <td>Equity Index</td>
+      <td>CASH</td>
+    </tr>
+    <tr>
+      <th>225</th>
+      <td>NIKKEI 225  (OSE) Sep23</td>
+      <td>Equity Index</td>
+      <td>CASH</td>
+    </tr>
+    <tr>
+      <th>6B</th>
+      <td>BP CURRENCY FUT   Sep23</td>
+      <td>Currency</td>
+      <td>PHYS</td>
+    </tr>
+    <tr>
+      <th>BTC</th>
+      <td>CME Bitcoin Fut   Jul23</td>
+      <td>Non-Equity Index</td>
+      <td>CASH</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">futures_info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bb ticker</th>
+      <th>name</th>
+      <th>type</th>
+      <th>category</th>
+      <th>delivery type</th>
+      <th>exchange</th>
+      <th>contract date</th>
+      <th>contract size</th>
+      <th>last_price</th>
+      <th>contract value</th>
+      <th>crncy</th>
+      <th>margin limit</th>
+      <th>tick size</th>
+      <th>tick value</th>
+      <th>open interest</th>
+      <th>volume</th>
+      <th>volume 10d avg</th>
+    </tr>
+    <tr>
+      <th>symbol</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CL</th>
+      <td>CLA Comdty</td>
+      <td>WTI CRUDE FUTURE  Aug23</td>
+      <td>Physical commodity future.</td>
+      <td>Crude Oil</td>
+      <td>PHYS</td>
+      <td>New York Mercantile Exchange</td>
+      <td>2023-08-01</td>
+      <td>1000</td>
+      <td>74.370</td>
+      <td>74370.00</td>
+      <td>USD</td>
+      <td>5800.0</td>
+      <td>0.010</td>
+      <td>10.00</td>
+      <td>138498</td>
+      <td>197005</td>
+      <td>347826.2</td>
+    </tr>
+    <tr>
+      <th>NG</th>
+      <td>NGA Comdty</td>
+      <td>NATURAL GAS FUTR  Aug23</td>
+      <td>Physical commodity future.</td>
+      <td>Natural Gas</td>
+      <td>PHYS</td>
+      <td>New York Mercantile Exchange</td>
+      <td>2023-08-01</td>
+      <td>10000</td>
+      <td>2.521</td>
+      <td>25210.00</td>
+      <td>USD</td>
+      <td>4000.0</td>
+      <td>0.001</td>
+      <td>10.00</td>
+      <td>108685</td>
+      <td>88112</td>
+      <td>125200.7</td>
+    </tr>
+    <tr>
+      <th>GC</th>
+      <td>GCA Comdty</td>
+      <td>GOLD 100 OZ FUTR  Aug23</td>
+      <td>Physical commodity future.</td>
+      <td>Precious Metal</td>
+      <td>PHYS</td>
+      <td>Commodity Exchange, Inc.</td>
+      <td>2023-08-01</td>
+      <td>100</td>
+      <td>1959.200</td>
+      <td>195920.00</td>
+      <td>USD</td>
+      <td>8300.0</td>
+      <td>0.100</td>
+      <td>10.00</td>
+      <td>240346</td>
+      <td>154159</td>
+      <td>214421.1</td>
+    </tr>
+    <tr>
+      <th>AH</th>
+      <td>LAA Comdty</td>
+      <td>LME PRI ALUM FUTR Aug23</td>
+      <td>Physical commodity future.</td>
+      <td>Base Metal</td>
+      <td>PHYS</td>
+      <td>London Metal Exchange</td>
+      <td>2023-08-01</td>
+      <td>25</td>
+      <td>2250.000</td>
+      <td>56250.00</td>
+      <td>USD</td>
+      <td>NaN</td>
+      <td>0.010</td>
+      <td>0.25</td>
+      <td>53232</td>
+      <td>49557</td>
+      <td>34346.7</td>
+    </tr>
+    <tr>
+      <th>KC</th>
+      <td>KCA Comdty</td>
+      <td>COFFEE 'C' FUTURE Sep23</td>
+      <td>Physical commodity future.</td>
+      <td>Foodstuff</td>
+      <td>PHYS</td>
+      <td>ICE Futures US Softs</td>
+      <td>2023-09-01</td>
+      <td>37500</td>
+      <td>155.800</td>
+      <td>58425.00</td>
+      <td>USD</td>
+      <td>6750.0</td>
+      <td>0.050</td>
+      <td>18.75</td>
+      <td>91530</td>
+      <td>22289</td>
+      <td>17368.4</td>
+    </tr>
+    <tr>
+      <th>ZC</th>
+      <td>C A Comdty</td>
+      <td>CORN FUTURE       Dec23</td>
+      <td>Physical commodity future.</td>
+      <td>Corn</td>
+      <td>PHYS</td>
+      <td>Chicago Board of Trade</td>
+      <td>2023-12-01</td>
+      <td>5000</td>
+      <td>506.000</td>
+      <td>25300.00</td>
+      <td>USD</td>
+      <td>2300.0</td>
+      <td>0.250</td>
+      <td>12.50</td>
+      <td>564960</td>
+      <td>154303</td>
+      <td>178648.7</td>
+    </tr>
+    <tr>
+      <th>LE</th>
+      <td>LCA Comdty</td>
+      <td>LIVE CATTLE FUTR  Oct23</td>
+      <td>Physical commodity future.</td>
+      <td>Livestock</td>
+      <td>PHYS</td>
+      <td>Chicago Mercantile Exchange</td>
+      <td>2023-10-01</td>
+      <td>40000</td>
+      <td>182.475</td>
+      <td>72990.00</td>
+      <td>USD</td>
+      <td>1850.0</td>
+      <td>0.025</td>
+      <td>10.00</td>
+      <td>133247</td>
+      <td>35899</td>
+      <td>26848.3</td>
+    </tr>
+    <tr>
+      <th>HE</th>
+      <td>LHA Comdty</td>
+      <td>LEAN HOGS FUTURE  Oct23</td>
+      <td>Physical commodity future.</td>
+      <td>Livestock</td>
+      <td>CASH</td>
+      <td>Chicago Mercantile Exchange</td>
+      <td>2023-10-01</td>
+      <td>40000</td>
+      <td>82.350</td>
+      <td>32940.00</td>
+      <td>USD</td>
+      <td>1750.0</td>
+      <td>0.025</td>
+      <td>10.00</td>
+      <td>72754</td>
+      <td>18304</td>
+      <td>19510.1</td>
+    </tr>
+    <tr>
+      <th>ES</th>
+      <td>ESA Index</td>
+      <td>S&amp;P500 EMINI FUT  Sep23</td>
+      <td>Physical index future.</td>
+      <td>Equity Index</td>
+      <td>CASH</td>
+      <td>Chicago Mercantile Exchange</td>
+      <td>2023-09-01</td>
+      <td>50</td>
+      <td>4554.500</td>
+      <td>227725.00</td>
+      <td>USD</td>
+      <td>11200.0</td>
+      <td>0.250</td>
+      <td>12.50</td>
+      <td>2241106</td>
+      <td>690887</td>
+      <td>1406809.7</td>
+    </tr>
+    <tr>
+      <th>225</th>
+      <td>NKA Index</td>
+      <td>NIKKEI 225  (OSE) Sep23</td>
+      <td>Physical index future.</td>
+      <td>Equity Index</td>
+      <td>CASH</td>
+      <td>Osaka Exchange</td>
+      <td>2023-09-01</td>
+      <td>1000</td>
+      <td>32320.000</td>
+      <td>32320000.00</td>
+      <td>JPY</td>
+      <td>NaN</td>
+      <td>10.000</td>
+      <td>10000.00</td>
+      <td>200577</td>
+      <td>26462</td>
+      <td>70180.3</td>
+    </tr>
+    <tr>
+      <th>6B</th>
+      <td>BPA Curncy</td>
+      <td>BP CURRENCY FUT   Sep23</td>
+      <td>Currency future.</td>
+      <td>Currency</td>
+      <td>PHYS</td>
+      <td>Chicago Mercantile Exchange</td>
+      <td>2023-09-01</td>
+      <td>62500</td>
+      <td>130.810</td>
+      <td>81756.25</td>
+      <td>USD</td>
+      <td>2500.0</td>
+      <td>0.010</td>
+      <td>6.25</td>
+      <td>241997</td>
+      <td>65967</td>
+      <td>109356.9</td>
+    </tr>
+    <tr>
+      <th>BTC</th>
+      <td>BTCA Curncy</td>
+      <td>CME Bitcoin Fut   Jul23</td>
+      <td>Currency future.</td>
+      <td>Non-Equity Index</td>
+      <td>CASH</td>
+      <td>Chicago Mercantile Exchange</td>
+      <td>2023-07-01</td>
+      <td>5</td>
+      <td>30125.000</td>
+      <td>150625.00</td>
+      <td>USD</td>
+      <td>38000.0</td>
+      <td>5.000</td>
+      <td>25.00</td>
+      <td>11929</td>
+      <td>4894</td>
+      <td>10269.8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="quoting-conventions">
+<h2>Quoting Conventions<a class="headerlink" href="#quoting-conventions" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.contractSpecs.html">https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.contractSpecs.html</a></p>
+<section id="multiple">
+<h3>Multiple<a class="headerlink" href="#multiple" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">futures_info</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;contract size&#39;</span><span class="p">,</span><span class="s1">&#39;contract value&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;contract size&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;contract value&#39;</span><span class="p">:</span><span class="s1">&#39;$</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_b84c0">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_b84c0_level0_col0" class="col_heading level0 col0" >name</th>
+      <th id="T_b84c0_level0_col1" class="col_heading level0 col1" >contract size</th>
+      <th id="T_b84c0_level0_col2" class="col_heading level0 col2" >contract value</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_b84c0_level0_row0" class="row_heading level0 row0" >CL</th>
+      <td id="T_b84c0_row0_col0" class="data row0 col0" >WTI CRUDE FUTURE  Aug23</td>
+      <td id="T_b84c0_row0_col1" class="data row0 col1" >1,000</td>
+      <td id="T_b84c0_row0_col2" class="data row0 col2" >$74,370</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row1" class="row_heading level0 row1" >NG</th>
+      <td id="T_b84c0_row1_col0" class="data row1 col0" >NATURAL GAS FUTR  Aug23</td>
+      <td id="T_b84c0_row1_col1" class="data row1 col1" >10,000</td>
+      <td id="T_b84c0_row1_col2" class="data row1 col2" >$25,210</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row2" class="row_heading level0 row2" >GC</th>
+      <td id="T_b84c0_row2_col0" class="data row2 col0" >GOLD 100 OZ FUTR  Aug23</td>
+      <td id="T_b84c0_row2_col1" class="data row2 col1" >100</td>
+      <td id="T_b84c0_row2_col2" class="data row2 col2" >$195,920</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row3" class="row_heading level0 row3" >AH</th>
+      <td id="T_b84c0_row3_col0" class="data row3 col0" >LME PRI ALUM FUTR Aug23</td>
+      <td id="T_b84c0_row3_col1" class="data row3 col1" >25</td>
+      <td id="T_b84c0_row3_col2" class="data row3 col2" >$56,250</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row4" class="row_heading level0 row4" >KC</th>
+      <td id="T_b84c0_row4_col0" class="data row4 col0" >COFFEE 'C' FUTURE Sep23</td>
+      <td id="T_b84c0_row4_col1" class="data row4 col1" >37,500</td>
+      <td id="T_b84c0_row4_col2" class="data row4 col2" >$58,425</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row5" class="row_heading level0 row5" >ZC</th>
+      <td id="T_b84c0_row5_col0" class="data row5 col0" >CORN FUTURE       Dec23</td>
+      <td id="T_b84c0_row5_col1" class="data row5 col1" >5,000</td>
+      <td id="T_b84c0_row5_col2" class="data row5 col2" >$25,300</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row6" class="row_heading level0 row6" >LE</th>
+      <td id="T_b84c0_row6_col0" class="data row6 col0" >LIVE CATTLE FUTR  Oct23</td>
+      <td id="T_b84c0_row6_col1" class="data row6 col1" >40,000</td>
+      <td id="T_b84c0_row6_col2" class="data row6 col2" >$72,990</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row7" class="row_heading level0 row7" >HE</th>
+      <td id="T_b84c0_row7_col0" class="data row7 col0" >LEAN HOGS FUTURE  Oct23</td>
+      <td id="T_b84c0_row7_col1" class="data row7 col1" >40,000</td>
+      <td id="T_b84c0_row7_col2" class="data row7 col2" >$32,940</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row8" class="row_heading level0 row8" >ES</th>
+      <td id="T_b84c0_row8_col0" class="data row8 col0" >S&P500 EMINI FUT  Sep23</td>
+      <td id="T_b84c0_row8_col1" class="data row8 col1" >50</td>
+      <td id="T_b84c0_row8_col2" class="data row8 col2" >$227,725</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row9" class="row_heading level0 row9" >225</th>
+      <td id="T_b84c0_row9_col0" class="data row9 col0" >NIKKEI 225  (OSE) Sep23</td>
+      <td id="T_b84c0_row9_col1" class="data row9 col1" >1,000</td>
+      <td id="T_b84c0_row9_col2" class="data row9 col2" >$32,320,000</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row10" class="row_heading level0 row10" >6B</th>
+      <td id="T_b84c0_row10_col0" class="data row10 col0" >BP CURRENCY FUT   Sep23</td>
+      <td id="T_b84c0_row10_col1" class="data row10 col1" >62,500</td>
+      <td id="T_b84c0_row10_col2" class="data row10 col2" >$81,756</td>
+    </tr>
+    <tr>
+      <th id="T_b84c0_level0_row11" class="row_heading level0 row11" >BTC</th>
+      <td id="T_b84c0_row11_col0" class="data row11 col0" >CME Bitcoin Fut   Jul23</td>
+      <td id="T_b84c0_row11_col1" class="data row11 col1" >5</td>
+      <td id="T_b84c0_row11_col2" class="data row11 col2" >$150,625</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="tick-size">
+<h3>Tick Size<a class="headerlink" href="#tick-size" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">futures_info</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;tick size&#39;</span><span class="p">,</span><span class="s1">&#39;tick value&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;tick size&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:.3f}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;tick value&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_eb108">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_eb108_level0_col0" class="col_heading level0 col0" >name</th>
+      <th id="T_eb108_level0_col1" class="col_heading level0 col1" >tick size</th>
+      <th id="T_eb108_level0_col2" class="col_heading level0 col2" >tick value</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_eb108_level0_row0" class="row_heading level0 row0" >CL</th>
+      <td id="T_eb108_row0_col0" class="data row0 col0" >WTI CRUDE FUTURE  Aug23</td>
+      <td id="T_eb108_row0_col1" class="data row0 col1" >0.010</td>
+      <td id="T_eb108_row0_col2" class="data row0 col2" >10.00</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row1" class="row_heading level0 row1" >NG</th>
+      <td id="T_eb108_row1_col0" class="data row1 col0" >NATURAL GAS FUTR  Aug23</td>
+      <td id="T_eb108_row1_col1" class="data row1 col1" >0.001</td>
+      <td id="T_eb108_row1_col2" class="data row1 col2" >10.00</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row2" class="row_heading level0 row2" >GC</th>
+      <td id="T_eb108_row2_col0" class="data row2 col0" >GOLD 100 OZ FUTR  Aug23</td>
+      <td id="T_eb108_row2_col1" class="data row2 col1" >0.100</td>
+      <td id="T_eb108_row2_col2" class="data row2 col2" >10.00</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row3" class="row_heading level0 row3" >AH</th>
+      <td id="T_eb108_row3_col0" class="data row3 col0" >LME PRI ALUM FUTR Aug23</td>
+      <td id="T_eb108_row3_col1" class="data row3 col1" >0.010</td>
+      <td id="T_eb108_row3_col2" class="data row3 col2" >0.25</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row4" class="row_heading level0 row4" >KC</th>
+      <td id="T_eb108_row4_col0" class="data row4 col0" >COFFEE 'C' FUTURE Sep23</td>
+      <td id="T_eb108_row4_col1" class="data row4 col1" >0.050</td>
+      <td id="T_eb108_row4_col2" class="data row4 col2" >18.75</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row5" class="row_heading level0 row5" >ZC</th>
+      <td id="T_eb108_row5_col0" class="data row5 col0" >CORN FUTURE       Dec23</td>
+      <td id="T_eb108_row5_col1" class="data row5 col1" >0.250</td>
+      <td id="T_eb108_row5_col2" class="data row5 col2" >12.50</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row6" class="row_heading level0 row6" >LE</th>
+      <td id="T_eb108_row6_col0" class="data row6 col0" >LIVE CATTLE FUTR  Oct23</td>
+      <td id="T_eb108_row6_col1" class="data row6 col1" >0.025</td>
+      <td id="T_eb108_row6_col2" class="data row6 col2" >10.00</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row7" class="row_heading level0 row7" >HE</th>
+      <td id="T_eb108_row7_col0" class="data row7 col0" >LEAN HOGS FUTURE  Oct23</td>
+      <td id="T_eb108_row7_col1" class="data row7 col1" >0.025</td>
+      <td id="T_eb108_row7_col2" class="data row7 col2" >10.00</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row8" class="row_heading level0 row8" >ES</th>
+      <td id="T_eb108_row8_col0" class="data row8 col0" >S&P500 EMINI FUT  Sep23</td>
+      <td id="T_eb108_row8_col1" class="data row8 col1" >0.250</td>
+      <td id="T_eb108_row8_col2" class="data row8 col2" >12.50</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row9" class="row_heading level0 row9" >225</th>
+      <td id="T_eb108_row9_col0" class="data row9 col0" >NIKKEI 225  (OSE) Sep23</td>
+      <td id="T_eb108_row9_col1" class="data row9 col1" >10.000</td>
+      <td id="T_eb108_row9_col2" class="data row9 col2" >10000.00</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row10" class="row_heading level0 row10" >6B</th>
+      <td id="T_eb108_row10_col0" class="data row10 col0" >BP CURRENCY FUT   Sep23</td>
+      <td id="T_eb108_row10_col1" class="data row10 col1" >0.010</td>
+      <td id="T_eb108_row10_col2" class="data row10 col2" >6.25</td>
+    </tr>
+    <tr>
+      <th id="T_eb108_level0_row11" class="row_heading level0 row11" >BTC</th>
+      <td id="T_eb108_row11_col0" class="data row11 col0" >CME Bitcoin Fut   Jul23</td>
+      <td id="T_eb108_row11_col1" class="data row11 col1" >5.000</td>
+      <td id="T_eb108_row11_col2" class="data row11 col2" >25.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section id="open-interest">
+<h2>Open Interest<a class="headerlink" href="#open-interest" title="Link to this heading">#</a></h2>
+<p><strong>Open Interest</strong> measures the number of open positions for the specific futures contract, cumulated over time.</p>
+<p><strong>Volume</strong> is the number of contracts traded that period (daily below).</p>
+<p>See the chart below for the difference</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">futures_info</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;open interest&#39;</span><span class="p">,</span><span class="s1">&#39;volume&#39;</span><span class="p">,</span><span class="s1">&#39;volume 10d avg&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;open interest&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;volume&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;volume 10d avg&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_a2c87">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_a2c87_level0_col0" class="col_heading level0 col0" >name</th>
+      <th id="T_a2c87_level0_col1" class="col_heading level0 col1" >open interest</th>
+      <th id="T_a2c87_level0_col2" class="col_heading level0 col2" >volume</th>
+      <th id="T_a2c87_level0_col3" class="col_heading level0 col3" >volume 10d avg</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >symbol</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_a2c87_level0_row0" class="row_heading level0 row0" >CL</th>
+      <td id="T_a2c87_row0_col0" class="data row0 col0" >WTI CRUDE FUTURE  Aug23</td>
+      <td id="T_a2c87_row0_col1" class="data row0 col1" >138,498</td>
+      <td id="T_a2c87_row0_col2" class="data row0 col2" >197,005</td>
+      <td id="T_a2c87_row0_col3" class="data row0 col3" >347,826</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row1" class="row_heading level0 row1" >NG</th>
+      <td id="T_a2c87_row1_col0" class="data row1 col0" >NATURAL GAS FUTR  Aug23</td>
+      <td id="T_a2c87_row1_col1" class="data row1 col1" >108,685</td>
+      <td id="T_a2c87_row1_col2" class="data row1 col2" >88,112</td>
+      <td id="T_a2c87_row1_col3" class="data row1 col3" >125,201</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row2" class="row_heading level0 row2" >GC</th>
+      <td id="T_a2c87_row2_col0" class="data row2 col0" >GOLD 100 OZ FUTR  Aug23</td>
+      <td id="T_a2c87_row2_col1" class="data row2 col1" >240,346</td>
+      <td id="T_a2c87_row2_col2" class="data row2 col2" >154,159</td>
+      <td id="T_a2c87_row2_col3" class="data row2 col3" >214,421</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row3" class="row_heading level0 row3" >AH</th>
+      <td id="T_a2c87_row3_col0" class="data row3 col0" >LME PRI ALUM FUTR Aug23</td>
+      <td id="T_a2c87_row3_col1" class="data row3 col1" >53,232</td>
+      <td id="T_a2c87_row3_col2" class="data row3 col2" >49,557</td>
+      <td id="T_a2c87_row3_col3" class="data row3 col3" >34,347</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row4" class="row_heading level0 row4" >KC</th>
+      <td id="T_a2c87_row4_col0" class="data row4 col0" >COFFEE 'C' FUTURE Sep23</td>
+      <td id="T_a2c87_row4_col1" class="data row4 col1" >91,530</td>
+      <td id="T_a2c87_row4_col2" class="data row4 col2" >22,289</td>
+      <td id="T_a2c87_row4_col3" class="data row4 col3" >17,368</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row5" class="row_heading level0 row5" >ZC</th>
+      <td id="T_a2c87_row5_col0" class="data row5 col0" >CORN FUTURE       Dec23</td>
+      <td id="T_a2c87_row5_col1" class="data row5 col1" >564,960</td>
+      <td id="T_a2c87_row5_col2" class="data row5 col2" >154,303</td>
+      <td id="T_a2c87_row5_col3" class="data row5 col3" >178,649</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row6" class="row_heading level0 row6" >LE</th>
+      <td id="T_a2c87_row6_col0" class="data row6 col0" >LIVE CATTLE FUTR  Oct23</td>
+      <td id="T_a2c87_row6_col1" class="data row6 col1" >133,247</td>
+      <td id="T_a2c87_row6_col2" class="data row6 col2" >35,899</td>
+      <td id="T_a2c87_row6_col3" class="data row6 col3" >26,848</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row7" class="row_heading level0 row7" >HE</th>
+      <td id="T_a2c87_row7_col0" class="data row7 col0" >LEAN HOGS FUTURE  Oct23</td>
+      <td id="T_a2c87_row7_col1" class="data row7 col1" >72,754</td>
+      <td id="T_a2c87_row7_col2" class="data row7 col2" >18,304</td>
+      <td id="T_a2c87_row7_col3" class="data row7 col3" >19,510</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row8" class="row_heading level0 row8" >ES</th>
+      <td id="T_a2c87_row8_col0" class="data row8 col0" >S&P500 EMINI FUT  Sep23</td>
+      <td id="T_a2c87_row8_col1" class="data row8 col1" >2,241,106</td>
+      <td id="T_a2c87_row8_col2" class="data row8 col2" >690,887</td>
+      <td id="T_a2c87_row8_col3" class="data row8 col3" >1,406,810</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row9" class="row_heading level0 row9" >225</th>
+      <td id="T_a2c87_row9_col0" class="data row9 col0" >NIKKEI 225  (OSE) Sep23</td>
+      <td id="T_a2c87_row9_col1" class="data row9 col1" >200,577</td>
+      <td id="T_a2c87_row9_col2" class="data row9 col2" >26,462</td>
+      <td id="T_a2c87_row9_col3" class="data row9 col3" >70,180</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row10" class="row_heading level0 row10" >6B</th>
+      <td id="T_a2c87_row10_col0" class="data row10 col0" >BP CURRENCY FUT   Sep23</td>
+      <td id="T_a2c87_row10_col1" class="data row10 col1" >241,997</td>
+      <td id="T_a2c87_row10_col2" class="data row10 col2" >65,967</td>
+      <td id="T_a2c87_row10_col3" class="data row10 col3" >109,357</td>
+    </tr>
+    <tr>
+      <th id="T_a2c87_level0_row11" class="row_heading level0 row11" >BTC</th>
+      <td id="T_a2c87_row11_col0" class="data row11 col0" >CME Bitcoin Fut   Jul23</td>
+      <td id="T_a2c87_row11_col1" class="data row11 col1" >11,929</td>
+      <td id="T_a2c87_row11_col2" class="data row11 col2" >4,894</td>
+      <td id="T_a2c87_row11_col3" class="data row11 col3" >10,270</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<section id="closing-positions">
+<h3>Closing Positions<a class="headerlink" href="#closing-positions" title="Link to this heading">#</a></h3>
+<p>Most open interest is ultimately closed via <strong>offsetting contracts, NOT delivery</strong>.</p>
+<p>Consider the open interest for various contracts on Crude Oil (CL) and Gold (GC).</p>
+<p>For each contract, we see the open interest rises about a month before the delivery, and then drops to nearly zero just before delivery.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TICKS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CL&#39;</span><span class="p">,</span><span class="s1">&#39;GC&#39;</span><span class="p">]</span>
+
+<span class="n">futures_ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">LOADFILE</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;futures timeseries&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">futures_ts</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">futures_ts</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">futures_ts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;date&#39;</span>
+<span class="n">futures_ts</span> <span class="o">=</span> <span class="n">futures_ts</span><span class="o">.</span><span class="n">swaplevel</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">exname</span> <span class="o">=</span> <span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;OPEN_INT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="n">exdata</span> <span class="o">=</span> <span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;OPEN_INT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">exdata</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Open Interest for </span><span class="si">{</span><span class="n">exname</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7d2c55cc79115cfab786d5571da9fa3632bf09d84ca2532766020a9f43b08c0f.png" src="../_images/7d2c55cc79115cfab786d5571da9fa3632bf09d84ca2532766020a9f43b08c0f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">intpct</span> <span class="o">=</span> <span class="n">exdata</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">exdata</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Open Interest at close is </span><span class="si">{</span><span class="n">intpct</span><span class="si">:</span><span class="s1">.2%</span><span class="si">}</span><span class="s1"> of its peak!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Open Interest at close is 0.39% of its peak!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Jeremy\AppData\Local\Temp\ipykernel_30080\2823046234.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  intpct = exdata[-1]/exdata.max()
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="active-contract">
+<h3>Active Contract<a class="headerlink" href="#active-contract" title="Link to this heading">#</a></h3>
+<p>For a given futures chain, only a few are liquid.</p>
+<p>The <strong>active contract</strong> is typically denoted as the front-month (nearest expiration) which typically corresponds with the contract with the highest <strong>open interest</strong>.</p>
+<p>For the two examples below, we see that the soonest-to-expiry sees a spike in open interest, with the second-nearest expiry rising in anticipation of being the active contract.</p>
+</section>
+<section id="liquidity">
+<h3>Liquidity<a class="headerlink" href="#liquidity" title="Link to this heading">#</a></h3>
+<p>Thus, the active contract tends to be <strong>much</strong> more liquid , as measured by volume or open interest.</p>
+<p>As a corollary, a contract will be listed, yet may receive almost zero interest or volume for months or years.</p>
+<p>In the example <strong>above</strong>, note that the open interest is miniscule for a year.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;OPEN_INT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2022-06&#39;</span><span class="p">,</span><span class="s1">&#39;2023-07&#39;</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Open Interest for </span><span class="si">{</span><span class="n">TICKS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;open interest&#39;</span><span class="p">)</span>
+<span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;VOLUME&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2022-06&#39;</span><span class="p">,</span><span class="s1">&#39;2023-07&#39;</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Volume for </span><span class="si">{</span><span class="n">TICKS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;volume&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0e2b1093a5c924c6c8cba49d57366b0d973fde10e6c702568cbcde14681a716b.png" src="../_images/0e2b1093a5c924c6c8cba49d57366b0d973fde10e6c702568cbcde14681a716b.png" />
+</div>
+</div>
+</section>
+<section id="margins-and-marking-to-market">
+<h3>Margins and Marking to Market<a class="headerlink" href="#margins-and-marking-to-market" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">marg</span> <span class="o">=</span> <span class="n">futures_info</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">marg</span><span class="p">[</span><span class="s1">&#39;margin limit %&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">futures_info</span><span class="p">[</span><span class="s1">&#39;margin limit&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">futures_info</span><span class="p">[</span><span class="s1">&#39;contract value&#39;</span><span class="p">]</span>
+
+<span class="n">marg</span><span class="p">[</span><span class="s1">&#39;vol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rx</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="n">marg</span><span class="p">[</span><span class="s1">&#39;margin sigma&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">marg</span><span class="p">[</span><span class="s1">&#39;margin limit %&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">marg</span><span class="p">[</span><span class="s1">&#39;vol&#39;</span><span class="p">]</span>
+<span class="n">marg</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">marg</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">()[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">marg</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+
+<span class="n">marg</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;margin sigma&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;margin limit %&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:.1%}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;vol&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:.1%}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;margin sigma&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:.1f}</span><span class="s1">&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_bb2d9">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_bb2d9_level0_col0" class="col_heading level0 col0" >margin limit %</th>
+      <th id="T_bb2d9_level0_col1" class="col_heading level0 col1" >vol</th>
+      <th id="T_bb2d9_level0_col2" class="col_heading level0 col2" >margin sigma</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_bb2d9_level0_row0" class="row_heading level0 row0" >WTI CRUDE</th>
+      <td id="T_bb2d9_row0_col0" class="data row0 col0" >7.8%</td>
+      <td id="T_bb2d9_row0_col1" class="data row0 col1" >3.4%</td>
+      <td id="T_bb2d9_row0_col2" class="data row0 col2" >2.3</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row1" class="row_heading level0 row1" >LEAN HOGS</th>
+      <td id="T_bb2d9_row1_col0" class="data row1 col0" >5.3%</td>
+      <td id="T_bb2d9_row1_col1" class="data row1 col1" >2.2%</td>
+      <td id="T_bb2d9_row1_col2" class="data row1 col2" >2.4</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row2" class="row_heading level0 row2" >LIVE CATTLE</th>
+      <td id="T_bb2d9_row2_col0" class="data row2 col0" >2.5%</td>
+      <td id="T_bb2d9_row2_col1" class="data row2 col1" >1.0%</td>
+      <td id="T_bb2d9_row2_col2" class="data row2 col2" >2.5</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row3" class="row_heading level0 row3" >S&P500 EMINI</th>
+      <td id="T_bb2d9_row3_col0" class="data row3 col0" >4.9%</td>
+      <td id="T_bb2d9_row3_col1" class="data row3 col1" >1.3%</td>
+      <td id="T_bb2d9_row3_col2" class="data row3 col2" >3.8</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row4" class="row_heading level0 row4" >NATURAL GAS</th>
+      <td id="T_bb2d9_row4_col0" class="data row4 col0" >15.9%</td>
+      <td id="T_bb2d9_row4_col1" class="data row4 col1" >4.1%</td>
+      <td id="T_bb2d9_row4_col2" class="data row4 col2" >3.9</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row5" class="row_heading level0 row5" >GOLD 100 OZ</th>
+      <td id="T_bb2d9_row5_col0" class="data row5 col0" >4.2%</td>
+      <td id="T_bb2d9_row5_col1" class="data row5 col1" >0.9%</td>
+      <td id="T_bb2d9_row5_col2" class="data row5 col2" >4.5</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row6" class="row_heading level0 row6" >BP CURRENCY</th>
+      <td id="T_bb2d9_row6_col0" class="data row6 col0" >3.1%</td>
+      <td id="T_bb2d9_row6_col1" class="data row6 col1" >0.6%</td>
+      <td id="T_bb2d9_row6_col2" class="data row6 col2" >5.1</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row7" class="row_heading level0 row7" >COFFEE 'C'</th>
+      <td id="T_bb2d9_row7_col0" class="data row7 col0" >11.6%</td>
+      <td id="T_bb2d9_row7_col1" class="data row7 col1" >2.1%</td>
+      <td id="T_bb2d9_row7_col2" class="data row7 col2" >5.6</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row8" class="row_heading level0 row8" >CME Bitcoin</th>
+      <td id="T_bb2d9_row8_col0" class="data row8 col0" >25.2%</td>
+      <td id="T_bb2d9_row8_col1" class="data row8 col1" >4.5%</td>
+      <td id="T_bb2d9_row8_col2" class="data row8 col2" >5.6</td>
+    </tr>
+    <tr>
+      <th id="T_bb2d9_level0_row9" class="row_heading level0 row9" >CORN</th>
+      <td id="T_bb2d9_row9_col0" class="data row9 col0" >9.1%</td>
+      <td id="T_bb2d9_row9_col1" class="data row9 col1" >1.5%</td>
+      <td id="T_bb2d9_row9_col2" class="data row9 col2" >6.2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<section id="futures-references">
+<h4>Futures References<a class="headerlink" href="#futures-references" title="Link to this heading">#</a></h4>
+<p>The CME provides a helpful series of videos for an introduction to Futures</p>
+<p><a class="reference external" href="https://www.cmegroup.com/education/courses/introduction-to-futures/definition-of-a-futures-contract.html">https://www.cmegroup.com/education/courses/introduction-to-futures/definition-of-a-futures-contract.html</a></p>
+</section>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pricing">
+<h1>Pricing<a class="headerlink" href="#pricing" title="Link to this heading">#</a></h1>
+<section id="forward-price">
+<h2>Forward Price<a class="headerlink" href="#forward-price" title="Link to this heading">#</a></h2>
+<p>The basic model of a futures price is:</p>
+<div class="math notranslate nohighlight">
+\[F_0 = S_0 e^{r_f T}\]</div>
+<p>This equation is derived by no-arbitrage, in a simplified setting of</p>
+<ul class="simple">
+<li><p>no market frictions</p></li>
+<li><p>a constant risk-free rate, <span class="math notranslate nohighlight">\(r_f\)</span></p></li>
+<li><p>no financing considerations (margin, marking to market, etc)</p></li>
+</ul>
+<p>This is just the <strong>forward pricing</strong> equation.</p>
+<p>It says that the futures price should be the spot price compounded by the risk-free rate until delivery.</p>
+</section>
+<section id="carry">
+<h2>Carry<a class="headerlink" href="#carry" title="Link to this heading">#</a></h2>
+<p>The pricing formula above accounts for the time-value of money, but it does not account for the <strong>carry</strong> cost of the asset.</p>
+<section id="dividend-yield">
+<h3>Dividend yield<a class="headerlink" href="#dividend-yield" title="Link to this heading">#</a></h3>
+<p>Suppose that the asset pays a dividend yield of <span class="math notranslate nohighlight">\(q\)</span></p>
+<ul class="simple">
+<li><p>dividends on stock index</p></li>
+<li><p>lease rate on metals</p></li>
+</ul>
+</section>
+<section id="storage-cost">
+<h3>Storage cost<a class="headerlink" href="#storage-cost" title="Link to this heading">#</a></h3>
+<p>The asset may be costly to store, such that it has a negative carry.</p>
+<ul class="simple">
+<li><p>oil, grains, etc</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Carry<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Let <strong>carry</strong>, <span class="math notranslate nohighlight">\(c\)</span>, denote the net difference of the storage costs minus income.</p>
+<p>Then,
+$<span class="math notranslate nohighlight">\(F_0 = S_0 e^{(r_f+c)T}\)</span>$</p>
+<p>That is, the</p>
+<ul class="simple">
+<li><p>higher the storage costs, the <strong>higher</strong> the futures price.</p></li>
+<li><p>higher the income, the <strong>lower</strong> the futures price.</p></li>
+</ul>
+</section>
+<section id="convenience-yield">
+<h3>Convenience Yield<a class="headerlink" href="#convenience-yield" title="Link to this heading">#</a></h3>
+<p>For consumption assets, the no-arbitrage argument is more complicated.
+$<span class="math notranslate nohighlight">\(F_0 &lt; S_0e^{(r_f+c)T}\)</span><span class="math notranslate nohighlight">\(
+This is due to the fact that the asset has a **convenience yield**, \)</span>y$.</p>
+<p>This convenience yield is not explicit income to the owner, but rather potential income should the consumption use of the asset be important during the contract period.</p>
+<p>The equation can make explicit note of this,
+$<span class="math notranslate nohighlight">\(F_0 = S_0e^{(r_f+c-y)T}\)</span><span class="math notranslate nohighlight">\(
+or simply include the convenience yield as part of the carry.
+\)</span><span class="math notranslate nohighlight">\(F_0 = S_0e^{(r_f+c^*)T}\)</span>$</p>
+</section>
+<section id="negative-price-for-oil">
+<h3>Negative Price for Oil?<a class="headerlink" href="#negative-price-for-oil" title="Link to this heading">#</a></h3>
+<p>Typically, carry costs are a second-order factor for prices.</p>
+<p>But sometimes market frictions cause them to be of high importance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TICK</span> <span class="o">=</span> <span class="s1">&#39;CL&#39;</span>
+<span class="n">data_comp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">LOADFILE</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;roll conventions </span><span class="si">{</span><span class="n">TICK</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+<span class="n">data_comp</span><span class="p">[</span><span class="s1">&#39;CL1 Comdty&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span><span class="s1">&#39;2020-06-30&#39;</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="mi">70</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Negative Price for </span><span class="si">{</span><span class="n">TICK</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;active futures price&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/818a85f564ef6c15e4c2a569633f6b2eb63993c91c7c3bd5bc1926039a9f9787.png" src="../_images/818a85f564ef6c15e4c2a569633f6b2eb63993c91c7c3bd5bc1926039a9f9787.png" />
+</div>
+</div>
+<section id="references">
+<h4>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h4>
+<p><a class="reference external" href="https://www.nytimes.com/2020/04/20/business/oil-prices.html">https://www.nytimes.com/2020/04/20/business/oil-prices.html</a>
+<a class="reference external" href="https://www.forbes.com/sites/sarahhansen/2020/04/21/heres-what-negative-oil-prices-really-mean/?sh=5530d0185a85">https://www.forbes.com/sites/sarahhansen/2020/04/21/heres-what-negative-oil-prices-really-mean/?sh=5530d0185a85</a></p>
+</section>
+</section>
+</section>
+<section id="complications">
+<h2>Complications<a class="headerlink" href="#complications" title="Link to this heading">#</a></h2>
+<p>There are various complications to the simple model.</p>
+<section id="moving-interest-rates">
+<h3>Moving Interest Rates<a class="headerlink" href="#moving-interest-rates" title="Link to this heading">#</a></h3>
+<p>The formulas above assume a constant interest rate.</p>
+<p>If the interest rate moves, then we would have the following adjustments:</p>
+<ul class="simple">
+<li><p><strong>Higher</strong> price if asset is <strong>positively</strong> correlated to the asset value</p></li>
+<li><p><strong>Lower</strong> price if asset is <strong>negatively</strong> correlated to the asset value
+Why?</p></li>
+</ul>
+</section>
+<section id="daily-settlement">
+<h3>Daily Settlement<a class="headerlink" href="#daily-settlement" title="Link to this heading">#</a></h3>
+<p>Futures contracts are settled daily, which means the cashflows are paid/received day-by-day rather than all at delivery.</p>
+<section id="terminology">
+<h4>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Daily Settlement</strong>: The profit/loss of the day is settled via an accrual / deduction from the margin account. This payment is irrevocable. That is to say that it is not collateral but a permanent payment based on the day’s movement.</p></li>
+<li><p><strong>Variation Margin</strong>: To reduce counterparty risk in some collateralized trades, (such as repo,) you might need to pay a variation margin when the collateral value goes down. This is a form of collateral: it earns interest on your behalf, and it will be returned at the end of the trade.</p></li>
+<li><p><strong>Mark-to-market</strong>: Revising the price of an asset in the financial records, (such as a balance sheet,) to reflect the market movements in the price. This has no implications for cashflow but rather is a financial accounting revision. This term is often used to refer to teh <strong>daily settlement</strong> mentioned above, but this term is more general.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="futures-vs-forwards">
+<h2>Futures vs Forwards<a class="headerlink" href="#futures-vs-forwards" title="Link to this heading">#</a></h2>
+<p>The CME video compares and contrasts.</p>
+<p><a class="reference external" href="https://www.cmegroup.com/education/courses/introduction-to-futures/futures-contracts-compared-to-forwards.html">https://www.cmegroup.com/education/courses/introduction-to-futures/futures-contracts-compared-to-forwards.html</a></p>
+<ul class="simple">
+<li><p>For each difference, would it cause the price of the future contract to be more or less than the comparable forward?</p></li>
+<li><p>Which differences do you think are of most practical importance?</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-futures-curve">
+<h1>The Futures Curve<a class="headerlink" href="#the-futures-curve" title="Link to this heading">#</a></h1>
+<section id="defining-the-curve">
+<h2>Defining the Curve<a class="headerlink" href="#defining-the-curve" title="Link to this heading">#</a></h2>
+<p>At a given date, consider the full chain of some futures contract:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list_curves</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CL1&#39;</span><span class="p">,</span><span class="s1">&#39;GC1&#39;</span><span class="p">]</span>
+<span class="n">curves</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">comdty</span> <span class="ow">in</span> <span class="n">list_curves</span><span class="p">:</span>
+    <span class="n">curves</span><span class="p">[</span><span class="n">comdty</span><span class="p">]</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">LOADFILE</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;curve </span><span class="si">{</span><span class="n">comdty</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">curves</span><span class="p">[</span><span class="n">comdty</span><span class="p">]</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;price&#39;</span><span class="p">:</span><span class="s1">&#39;$</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;open interest&#39;</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_fe555">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_fe555_level0_col0" class="col_heading level0 col0" >ticker</th>
+      <th id="T_fe555_level0_col1" class="col_heading level0 col1" >delivery date</th>
+      <th id="T_fe555_level0_col2" class="col_heading level0 col2" >price</th>
+      <th id="T_fe555_level0_col3" class="col_heading level0 col3" >open interest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_fe555_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_fe555_row0_col0" class="data row0 col0" >GCN3 Comdty</td>
+      <td id="T_fe555_row0_col1" class="data row0 col1" >2023-07-03 00:00:00</td>
+      <td id="T_fe555_row0_col2" class="data row0 col2" >$1,952.40</td>
+      <td id="T_fe555_row0_col3" class="data row0 col3" >58</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_fe555_row1_col0" class="data row1 col0" >GCU3 Comdty</td>
+      <td id="T_fe555_row1_col1" class="data row1 col1" >2023-09-01 00:00:00</td>
+      <td id="T_fe555_row1_col2" class="data row1 col2" >$1,967.70</td>
+      <td id="T_fe555_row1_col3" class="data row1 col3" >557</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_fe555_row2_col0" class="data row2 col0" >GCZ3 Comdty</td>
+      <td id="T_fe555_row2_col1" class="data row2 col1" >2023-12-01 00:00:00</td>
+      <td id="T_fe555_row2_col2" class="data row2 col2" >$1,997.90</td>
+      <td id="T_fe555_row2_col3" class="data row2 col3" >218,713</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_fe555_row3_col0" class="data row3 col0" >GCJ4 Comdty</td>
+      <td id="T_fe555_row3_col1" class="data row3 col1" >2024-04-01 00:00:00</td>
+      <td id="T_fe555_row3_col2" class="data row3 col2" >$2,035.20</td>
+      <td id="T_fe555_row3_col3" class="data row3 col3" >5,091</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_fe555_row4_col0" class="data row4 col0" >GCQ4 Comdty</td>
+      <td id="T_fe555_row4_col1" class="data row4 col1" >2024-08-01 00:00:00</td>
+      <td id="T_fe555_row4_col2" class="data row4 col2" >$2,071.20</td>
+      <td id="T_fe555_row4_col3" class="data row4 col3" >460</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_fe555_row5_col0" class="data row5 col0" >GCZ4 Comdty</td>
+      <td id="T_fe555_row5_col1" class="data row5 col1" >2024-12-02 00:00:00</td>
+      <td id="T_fe555_row5_col2" class="data row5 col2" >$2,102.20</td>
+      <td id="T_fe555_row5_col3" class="data row5 col3" >799</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_fe555_row6_col0" class="data row6 col0" >GCJ5 Comdty</td>
+      <td id="T_fe555_row6_col1" class="data row6 col1" >2025-04-01 00:00:00</td>
+      <td id="T_fe555_row6_col2" class="data row6 col2" >$2,136.90</td>
+      <td id="T_fe555_row6_col3" class="data row6 col3" >0</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_fe555_row7_col0" class="data row7 col0" >GCZ5 Comdty</td>
+      <td id="T_fe555_row7_col1" class="data row7 col1" >2025-12-01 00:00:00</td>
+      <td id="T_fe555_row7_col2" class="data row7 col2" >$2,170.70</td>
+      <td id="T_fe555_row7_col3" class="data row7 col3" >9</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_fe555_row8_col0" class="data row8 col0" >GCZ6 Comdty</td>
+      <td id="T_fe555_row8_col1" class="data row8 col1" >2026-12-01 00:00:00</td>
+      <td id="T_fe555_row8_col2" class="data row8 col2" >$2,209.80</td>
+      <td id="T_fe555_row8_col3" class="data row8 col3" >2</td>
+    </tr>
+    <tr>
+      <th id="T_fe555_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_fe555_row9_col0" class="data row9 col0" >GCZ7 Comdty</td>
+      <td id="T_fe555_row9_col1" class="data row9 col1" >2027-12-01 00:00:00</td>
+      <td id="T_fe555_row9_col2" class="data row9 col2" >$2,247.00</td>
+      <td id="T_fe555_row9_col3" class="data row9 col3" >0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>If we plot this chain against the delivery dates, we get the <strong>futures curve</strong>.</p>
+<p>The curves below show the marker sizes in proportion to the open interest of each contract.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">comdty</span> <span class="ow">in</span> <span class="n">list_curves</span><span class="p">:</span>
+    
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">curves</span><span class="p">[</span><span class="n">comdty</span><span class="p">]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;delivery date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+    <span class="n">msize</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;open interest&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;open interest&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">*</span> <span class="mi">500</span>
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">temp</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="n">comdty</span><span class="p">)</span>
+    <span class="n">temp</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;delivery date&#39;</span><span class="p">,</span><span class="s1">&#39;price&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="n">msize</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="n">comdty</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f5f3232aec41669084162cab15fc90d9c05e21a1b5559c50af702972d0c72661.png" src="../_images/f5f3232aec41669084162cab15fc90d9c05e21a1b5559c50af702972d0c72661.png" />
+<img alt="../_images/01ce6d663e9abf1370516091efc3bc79e5ea621fd977e3cd57c42fd4e9b9405a.png" src="../_images/01ce6d663e9abf1370516091efc3bc79e5ea621fd977e3cd57c42fd4e9b9405a.png" />
+</div>
+</div>
+</section>
+<section id="backwardation-and-contango">
+<h2>Backwardation and Contango<a class="headerlink" href="#backwardation-and-contango" title="Link to this heading">#</a></h2>
+<section id="relative-to-expectations">
+<h3>Relative to expectations<a class="headerlink" href="#relative-to-expectations" title="Link to this heading">#</a></h3>
+<p>“Normal” Backwardation</p>
+<ul class="simple">
+<li><p>the futures price is <strong>below</strong> the expected future spot</p></li>
+</ul>
+<p>Contango</p>
+<ul class="simple">
+<li><p>the futures price is <strong>above</strong> the expected future spot</p></li>
+</ul>
+</section>
+<section id="economics">
+<h3>Economics<a class="headerlink" href="#economics" title="Link to this heading">#</a></h3>
+<section id="normal">
+<h4>Normal?<a class="headerlink" href="#normal" title="Link to this heading">#</a></h4>
+<p><strong>“Normal”</strong> backwardation refers to economists (Keynes) thinking it should be the “normal” situation to have the futures price below the expected future spot.</p>
+<p>The argument depends on the assumption that hedgers (suppliers) would tend to be short the futures contract while market-makers and speculators would be long. The risk aversion of the former group being higher than the latter group might lead to the futures price being pressured below the market forecast</p>
+</section>
+<section id="relation-to-pricing-equations-above">
+<h4>Relation to pricing equations above<a class="headerlink" href="#relation-to-pricing-equations-above" title="Link to this heading">#</a></h4>
+<p>The simple pricing above implies…</p>
+<ul class="simple">
+<li><p>Contango = <strong>high</strong> carry costs relative to convenience yield</p></li>
+<li><p>Backwardation = <strong>low</strong> carry costs relative to convenience yield</p></li>
+</ul>
+</section>
+</section>
+<section id="descriptions-of-the-futures-curve">
+<h3>Descriptions of the futures curve<a class="headerlink" href="#descriptions-of-the-futures-curve" title="Link to this heading">#</a></h3>
+<p>Note that</p>
+<ul class="simple">
+<li><p>there is not an objective “expected future spot”.</p></li>
+<li><p>thus, whether in backwardation or contango would depend on one’s model of the forecasted spot price.</p></li>
+</ul>
+<p>In practice, these terms are often used with the assumption that <strong>today’s spot is the best prediction of the future spot</strong>:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align}
+P_t = \boldsymbol{E}_t\left[P_T\right]
+\end{align}\)</span></p>
+<section id="common-usage">
+<h4>Common usage<a class="headerlink" href="#common-usage" title="Link to this heading">#</a></h4>
+<p>This leads to the common usage.</p>
+<p>Backwardation</p>
+<ul class="simple">
+<li><p>the futures curve is <strong>downward</strong> sloping</p></li>
+</ul>
+<p>Contango</p>
+<ul class="simple">
+<li><p>the futures curve is <strong>upward</strong> sloping</p></li>
+</ul>
+<p>This definition is simpler and can be directly measured.</p>
+</section>
+<section id="in-the-examples-above">
+<h4>In the examples above<a class="headerlink" href="#in-the-examples-above" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Oil is in backwardation</p></li>
+<li><p>Gold is in contango</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="roll">
+<h2>Roll<a class="headerlink" href="#roll" title="Link to this heading">#</a></h2>
+<p>Trading futures positions involves <strong>rolling</strong> the position to new contracts.</p>
+<p>If the curve is in <strong>contango</strong> this rolling will require buying at a higher price</p>
+<ul class="simple">
+<li><p>add capital to hold same number of contracts</p></li>
+<li><p>keep capital flat, but in fewer contracts</p></li>
+</ul>
+<p>If the curve is in <strong>backwardation</strong> this rolling will mean buying at a lower price</p>
+<ul class="simple">
+<li><p>reallocate some capital to hold same number of contracts</p></li>
+<li><p>keep capital flat, but in more contracts</p></li>
+</ul>
+<p>The chart below shows price histories for various contracts on the chain, note that when one settles, a trader would have to roll up/down to another contract.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ptitle</span> <span class="o">=</span> <span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;LAST_PRICE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;LAST_PRICE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2022-10&#39;</span><span class="p">,</span><span class="s1">&#39;2023-07&#39;</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span><span class="mi">90</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Rolling Prices </span><span class="si">{</span><span class="n">ptitle</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c33aa50219160dae44ebe30ba010568d7bbce88c5d0e7ddf16de1887410d8cca.png" src="../_images/c33aa50219160dae44ebe30ba010568d7bbce88c5d0e7ddf16de1887410d8cca.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ptitle</span> <span class="o">=</span> <span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;LAST_PRICE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">futures_ts</span><span class="p">[</span><span class="s1">&#39;LAST_PRICE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2023-04&#39;</span><span class="p">,</span><span class="s1">&#39;2023-07&#39;</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">1900</span><span class="p">,</span><span class="mi">2100</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Rolling Prices </span><span class="si">{</span><span class="n">ptitle</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6f9ada60412266f37995ded7da283a8ae40aa3bfeff8a4a164ab6e56e486aade.png" src="../_images/6f9ada60412266f37995ded7da283a8ae40aa3bfeff8a4a164ab6e56e486aade.png" />
+</div>
+</div>
+</section>
+<section id="continuous-contract">
+<h2>Continuous Contract<a class="headerlink" href="#continuous-contract" title="Link to this heading">#</a></h2>
+<p>Given that futures contracts mature and roll off, it can be a challenge to obtain a long history of their prices.</p>
+<p>This is similar to getting long timeseries of bond prices.</p>
+<section id="generic-indexes">
+<h3>Generic indexes<a class="headerlink" href="#generic-indexes" title="Link to this heading">#</a></h3>
+<p>Like with bonds, the answer is to construct a generic index which is the compilation of many short-term instruments.</p>
+<p>With bonds, this is done by building so-called “constant maturity” series, which at any point in the past point might point to the bonds closest in maturity to the stated index.</p>
+<p>For futures, an index can be constructed by simply pointing to the active contract at any point in time.</p>
+</section>
+<section id="generic-front-and-back">
+<h3>Generic front and back<a class="headerlink" href="#generic-front-and-back" title="Link to this heading">#</a></h3>
+<p>The common notation is to denote the generic front contract with a “1” and the generic back contract with a “2”.</p>
+<p>For example, for crude oil, (CL), we have</p>
+<ul class="simple">
+<li><p>CL1</p></li>
+<li><p>CL2</p></li>
+</ul>
+<p>The chart below shows these price series.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_comp</span><span class="p">[[</span><span class="s1">&#39;CL1 Comdty&#39;</span><span class="p">,</span><span class="s1">&#39;CL2 Comdty&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2022-01&#39;</span><span class="p">,</span><span class="s1">&#39;2023-07&#39;</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span><span class="mi">125</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/effc0ee1a28865286d685ca6b6f8f55d142b3a492c973342283eff7561a81779.png" src="../_images/effc0ee1a28865286d685ca6b6f8f55d142b3a492c973342283eff7561a81779.png" />
+</div>
+</div>
+</section>
+<section id="rolling-the-continuous-series">
+<h3>Rolling the Continuous Series<a class="headerlink" href="#rolling-the-continuous-series" title="Link to this heading">#</a></h3>
+<p>The complication with the continuous front and back futures series is that at the time of rolling, the price will jump simply due to the roll.</p>
+<p>In analyzing the series, it will seem that these jumps are returns, when they are actually just a rebasing of the contract.</p>
+<p>If a series tends to be in contango, this will make the returns seem artificially high.</p>
+</section>
+<section id="adjusting-the-continuous-series">
+<h3>Adjusting the Continuous Series<a class="headerlink" href="#adjusting-the-continuous-series" title="Link to this heading">#</a></h3>
+<p>To avoid these jumps in the series, it is common to see one of three adjustments made at each roll, going back through time, to keep the breaks continuous.</p>
+<ul class="simple">
+<li><p>difference: adjust the level by an addititive factor</p></li>
+<li><p>ratio: adjust the past series by a multiplicative factor</p></li>
+<li><p>weighted average: roll between the front and back contracts over a window of <span class="math notranslate nohighlight">\(m\)</span> days, taking a weighted average between the contracts.</p></li>
+</ul>
+<p>The effect of all three adjustments is to</p>
+<ul class="simple">
+<li><p>eliminate jumps at roll dates.</p></li>
+<li><p>report true historic prices for the most recent contract used in the continuous series</p></li>
+<li><p>report an adjusted price for the earlier contracts used in the continuous series</p></li>
+</ul>
+<p>In these ways, it is similar to the adjustments to equity prices discussed in another note.</p>
+<section id="so-which-adjustment-to-use">
+<h4>So which adjustment to use?<a class="headerlink" href="#so-which-adjustment-to-use" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>difference: keeps the profit and loss true, which is useful if simulating a particular number of contracts</p></li>
+<li><p>ratio: ensures valid return series, which is useful if simulating a particular investment size.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_comp</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d22ca156d998df3ac2c26a2e854e8db80a98cef088fa03fef4a02cfd7065f254.png" src="../_images/d22ca156d998df3ac2c26a2e854e8db80a98cef088fa03fef4a02cfd7065f254.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="roll-rule">
+<h3>Roll Rule<a class="headerlink" href="#roll-rule" title="Link to this heading">#</a></h3>
+<p>There is also a decision to make regarding <strong>when</strong> to roll the contract in the continuous series. The most popular rules are</p>
+<ul class="simple">
+<li><p>fixed date (often first day of the month)</p></li>
+<li><p>at contract close</p></li>
+<li><p>when the max open interest shifts</p></li>
+</ul>
+<section id="careful-with-the-roll-method">
+<h4>Careful with the roll method<a class="headerlink" href="#careful-with-the-roll-method" title="Link to this heading">#</a></h4>
+<p>Using an improper roll method for historic analysis may greatly misrepresent the performance.</p>
+<p>Which of these is correct for understanding returns over time?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">px</span> <span class="o">=</span> <span class="n">data_comp</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">px</span><span class="p">[</span><span class="n">px</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">px</span><span class="p">[</span><span class="n">px</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">rx_comp</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+<span class="n">performanceMetrics</span><span class="p">(</span><span class="n">rx_comp</span><span class="p">,</span><span class="n">annualization</span><span class="o">=</span><span class="mi">252</span><span class="p">)</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:.1%}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Jeremy\AppData\Local\Temp\ipykernel_30080\1894612462.py:4: FutureWarning: The default fill_method=&#39;pad&#39; in DataFrame.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify &#39;fill_method=None&#39; to not fill NA values.
+  rx_comp = px.pct_change()
+</pre></div>
+</div>
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_95dbc">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_95dbc_level0_col0" class="col_heading level0 col0" >Mean</th>
+      <th id="T_95dbc_level0_col1" class="col_heading level0 col1" >Vol</th>
+      <th id="T_95dbc_level0_col2" class="col_heading level0 col2" >Sharpe</th>
+      <th id="T_95dbc_level0_col3" class="col_heading level0 col3" >Min</th>
+      <th id="T_95dbc_level0_col4" class="col_heading level0 col4" >Max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_95dbc_level0_row0" class="row_heading level0 row0" >CL1 Comdty</th>
+      <td id="T_95dbc_row0_col0" class="data row0 col0" >8.8%</td>
+      <td id="T_95dbc_row0_col1" class="data row0 col1" >43.9%</td>
+      <td id="T_95dbc_row0_col2" class="data row0 col2" >20.1%</td>
+      <td id="T_95dbc_row0_col3" class="data row0 col3" >-45.2%</td>
+      <td id="T_95dbc_row0_col4" class="data row0 col4" >37.7%</td>
+    </tr>
+    <tr>
+      <th id="T_95dbc_level0_row1" class="row_heading level0 row1" >CL2 Comdty</th>
+      <td id="T_95dbc_row1_col0" class="data row1 col0" >8.8%</td>
+      <td id="T_95dbc_row1_col1" class="data row1 col1" >45.4%</td>
+      <td id="T_95dbc_row1_col2" class="data row1 col2" >19.4%</td>
+      <td id="T_95dbc_row1_col3" class="data row1 col3" >-43.4%</td>
+      <td id="T_95dbc_row1_col4" class="data row1 col4" >78.8%</td>
+    </tr>
+    <tr>
+      <th id="T_95dbc_level0_row2" class="row_heading level0 row2" >CL1 Ratio</th>
+      <td id="T_95dbc_row2_col0" class="data row2 col0" >2.3%</td>
+      <td id="T_95dbc_row2_col1" class="data row2 col1" >42.9%</td>
+      <td id="T_95dbc_row2_col2" class="data row2 col2" >5.4%</td>
+      <td id="T_95dbc_row2_col3" class="data row2 col3" >-45.2%</td>
+      <td id="T_95dbc_row2_col4" class="data row2 col4" >25.1%</td>
+    </tr>
+    <tr>
+      <th id="T_95dbc_level0_row3" class="row_heading level0 row3" >CL1 Difference</th>
+      <td id="T_95dbc_row3_col0" class="data row3 col0" >37.3%</td>
+      <td id="T_95dbc_row3_col1" class="data row3 col1" >100.7%</td>
+      <td id="T_95dbc_row3_col2" class="data row3 col2" >37.1%</td>
+      <td id="T_95dbc_row3_col3" class="data row3 col3" >-89.8%</td>
+      <td id="T_95dbc_row3_col4" class="data row3 col4" >235.1%</td>
+    </tr>
+    <tr>
+      <th id="T_95dbc_level0_row4" class="row_heading level0 row4" >CL1 Weighted Avg</th>
+      <td id="T_95dbc_row4_col0" class="data row4 col0" >7.8%</td>
+      <td id="T_95dbc_row4_col1" class="data row4 col1" >41.7%</td>
+      <td id="T_95dbc_row4_col2" class="data row4 col2" >18.6%</td>
+      <td id="T_95dbc_row4_col3" class="data row4 col3" >-30.7%</td>
+      <td id="T_95dbc_row4_col4" class="data row4 col4" >24.4%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_notebook_build"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="_D.3.%20Inflation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">D.3. Inflation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="_D.6.%20Currency.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">D.6. Currency</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">D.4. Commodity Futures</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markets-foundations">Markets Foundations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uchicago-financial-mathematics">UChicago Financial Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#september-2023">September 2023</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assets">Assets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-on-variety">Data on Variety</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variety-of-means-and-volatilities">Variety of means and volatilities</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trading">Trading</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchanges">Exchanges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardization">Standardization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing">Clearing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settlement">Settlement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quoting-conventions">Quoting Conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple">Multiple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tick-size">Tick Size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-interest">Open Interest</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-positions">Closing Positions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#active-contract">Active Contract</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#liquidity">Liquidity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#margins-and-marking-to-market">Margins and Marking to Market</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#futures-references">Futures References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pricing">Pricing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-price">Forward Price</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carry">Carry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dividend-yield">Dividend yield</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#storage-cost">Storage cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Carry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convenience-yield">Convenience Yield</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-price-for-oil">Negative Price for Oil?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complications">Complications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-interest-rates">Moving Interest Rates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-settlement">Daily Settlement</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#futures-vs-forwards">Futures vs Forwards</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-futures-curve">The Futures Curve</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-curve">Defining the Curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backwardation-and-contango">Backwardation and Contango</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-to-expectations">Relative to expectations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#economics">Economics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normal">Normal?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-to-pricing-equations-above">Relation to pricing equations above</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptions-of-the-futures-curve">Descriptions of the futures curve</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#common-usage">Common usage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-examples-above">In the examples above</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roll">Roll</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-contract">Continuous Contract</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-indexes">Generic indexes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-front-and-back">Generic front and back</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-the-continuous-series">Rolling the Continuous Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-the-continuous-series">Adjusting the Continuous Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#so-which-adjustment-to-use">So which adjustment to use?</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roll-rule">Roll Rule</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#careful-with-the-roll-method">Careful with the roll method</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mark Hendricks
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

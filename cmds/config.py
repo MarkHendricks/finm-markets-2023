@@ -39,4 +39,4 @@ if __name__ == "__main__":
     # (DATA_DIR / 'derived').mkdir(parents=True, exist_ok=True)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    Path("./docs/_notebook_build").mkdir(parents=True, exist_ok=True)
+    Path("./docs_source/_notebook_build").mkdir(parents=True, exist_ok=True)
