@@ -1,0 +1,13 @@
+
+format: jb-book
+root: intro.md
+chapters:
+- file: _notebook_build/_D.0. Introduction.ipynb
+- file: myst_markdown_demos.md
+  sections:
+  - file: _notebook_build/_D.1. Treasury Debt.ipynb
+  - file: _notebook_build/_D.1.X. Debt Markets.ipynb
+- file: _notebook_build/_D.2. Money Markets.ipynb
+- file: _notebook_build/_D.3. Inflation.ipynb
+- file: _notebook_build/_D.4. Commodity Futures.ipynb
+- file: _notebook_build/_D.6. Currency.ipynb
