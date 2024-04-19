@@ -280,23 +280,49 @@ def task_run_notebooks():
         }
 
 
-def task_compile_sphinx_docs():
-    """Compile Sphinx Docs"""
+# def task_compile_sphinx_docs():
+#     """Compile Sphinx Docs"""
+#     file_dep = [
+#         "./docs/conf.py",
+#         "./docs/index.rst",
+#         "./docs/myst_markdown_demos.md",
+#     ]
+#     targets = [
+#         "./docs/_build/html/index.html",
+#         "./docs/_build/html/myst_markdown_demos.html",
+#     ]
+
+#     return {
+#         "actions": ["sphinx-build -M html ./docs/ ./docs/_build"],
+#         "targets": targets,
+#         "file_dep": file_dep,
+#         "task_dep": ["run_notebooks"],
+#         "clean": True,
+#     }
+
+
+def task_compile_book():
+    """Run jupyter-book build to compile the book."""
+
     file_dep = [
-        "./docs/conf.py",
-        "./docs/index.rst",
         "./docs/myst_markdown_demos.md",
+        "./docs/_config.yml",
+        "./docs/_toc.yml",
     ]
+
     targets = [
         "./docs/_build/html/index.html",
         "./docs/_build/html/myst_markdown_demos.html",
     ]
 
     return {
-        "actions": ["sphinx-build -M html ./docs/ ./docs/_build"],
+        "actions": [
+            # "jupyter-book build -W ./docs",
+            "jupyter-book build ./docs",
+        ],
         "targets": targets,
         "file_dep": file_dep,
-        "task_dep": ["run_notebooks"],
         "clean": True,
+        "task_dep": ["run_notebooks"],
     }
 
